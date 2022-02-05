@@ -20,19 +20,19 @@ namespace KursovaiJEY
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             Hide(); //прятки с форм 1
-            Form1 reg = new Form1(); //создаёт  переменную форм 1
-            Form2 avt = new Form2(); //создаёт переменную форм 2
-            avt.ShowDialog(); // открывается форма2 
-            reg.ShowDialog(); //открываетсч форм 1
+            Form1 avt = new Form1(); //создаёт  переменную форм 1
+            Form2 reg = new Form2(); //создаёт переменную форм 2
+            reg.ShowDialog(); // открывается форма2 
+            avt.Close(); //открываетсч форм 1
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Hide(); //прятки с форм 1
-            Form1 reg = new Form1(); //создаёт  переменную форм 1
+            Form1 avt = new Form1(); //создаёт  переменную форм 1
             Form3 menu = new Form3(); //создаёт переменную форм 2
             menu.ShowDialog(); // открывается форма2 
-            reg.ShowDialog(); //открываетсч форм 1
+            avt.Close(); //открываетсч форм 1
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -56,7 +56,6 @@ namespace KursovaiJEY
         {
             guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
         }
-
 
     }
 }
