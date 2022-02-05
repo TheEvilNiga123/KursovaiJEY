@@ -54,7 +54,7 @@ namespace KursovaiJEY
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1
+            guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
         }
 
 
