@@ -120,5 +120,14 @@
   <ItemGroup>
     <None Include="Resources\1486486302-arrow-down-downloading-storage-download-save_81227.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-пароль-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-body-67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-new3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
