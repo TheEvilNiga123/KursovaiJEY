@@ -108,6 +108,7 @@ namespace KursovaiJEY
             // guna2ToggleSwitch1
             // 
             this.guna2ToggleSwitch1.Animated = true;
+            this.guna2ToggleSwitch1.Checked = true;
             this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
@@ -115,6 +116,7 @@ namespace KursovaiJEY
             this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Location = new System.Drawing.Point(37, 124);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
+            this.guna2ToggleSwitch1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 20);
             this.guna2ToggleSwitch1.TabIndex = 4;
@@ -123,6 +125,7 @@ namespace KursovaiJEY
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
             // guna2Button1
             // 
@@ -296,6 +299,7 @@ namespace KursovaiJEY
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2ShadowPanel1.ResumeLayout(false);
