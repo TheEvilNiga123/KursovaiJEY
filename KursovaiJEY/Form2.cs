@@ -30,5 +30,32 @@ namespace KursovaiJEY
         {
             Application.Exit();
         }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2ToggleSwitch1.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
+            {
+                guna2TextBox2.UseSystemPasswordChar = true;
+            }
+            else if (guna2ToggleSwitch1.Checked == false) // если не активирован, то всё по дефолту
+            {
+                guna2TextBox2.UseSystemPasswordChar = false;
+            }
+            if (guna2ToggleSwitch1.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
+            {
+                guna2TextBox3.UseSystemPasswordChar = true;
+            }
+            else if (guna2ToggleSwitch1.Checked == false) // если не активирован, то всё по дефолту
+            {
+                guna2TextBox3.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+            guna2TextBox3.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+        }
+
     }
 }

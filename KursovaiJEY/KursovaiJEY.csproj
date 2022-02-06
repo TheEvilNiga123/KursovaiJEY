@@ -129,5 +129,56 @@
   <ItemGroup>
     <None Include="Resources\logo-new3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-шлюз-voip-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-house-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-body-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faro_grau-bunt_ldf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 06-02-2022 223335.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GbRqE_c-GI0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 06-02-2022 223855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 06-02-2022 224113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 06-02-2022 225508.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 06-02-2022 225555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-128 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-128 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
