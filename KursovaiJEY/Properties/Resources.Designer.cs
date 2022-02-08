@@ -83,6 +83,26 @@ namespace KursovaiJEY.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1614338139_68_p_svetloe_derevo_fon_94 {
+            get {
+                object obj = ResourceManager.GetObject("1614338139_68-p-svetloe-derevo-fon-94", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1614383689_4_p_fon_derevyannie_doski_svetlie_4 {
+            get {
+                object obj = ResourceManager.GetObject("1614383689_4-p-fon-derevyannie-doski-svetlie-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap faro_grau_bunt_ldf {
             get {
                 object obj = ResourceManager.GetObject("faro_grau-bunt_ldf", resourceCulture);
@@ -193,6 +213,16 @@ namespace KursovaiJEY.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_vk_в_круге_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-vk-в-круге-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_пароль_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-пароль-48", resourceCulture);
@@ -296,6 +326,36 @@ namespace KursovaiJEY.Properties {
         internal static System.Drawing.Bitmap Скриншот_06_02_2022_225555 {
             get {
                 object obj = ResourceManager.GetObject("Скриншот 06-02-2022 225555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Скриншот_08_02_2022_161544 {
+            get {
+                object obj = ResourceManager.GetObject("Скриншот 08-02-2022 161544", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Скриншот_08_02_2022_162810 {
+            get {
+                object obj = ResourceManager.GetObject("Скриншот 08-02-2022 162810", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Скриншот_08_02_2022_163456 {
+            get {
+                object obj = ResourceManager.GetObject("Скриншот 08-02-2022 163456", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -180,5 +180,23 @@
   <ItemGroup>
     <None Include="Resources\icons8-profile-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1614383689_4-p-fon-derevyannie-doski-svetlie-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1614338139_68-p-svetloe-derevo-fon-94.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 08-02-2022 161544.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 08-02-2022 162810.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скриншот 08-02-2022 163456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vk-в-круге-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
