@@ -19,4 +19,5 @@ namespace KursovaiJEY
             Application.Run(new Form1());
         }
     }
+    //static class ClientData
 }

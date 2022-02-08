@@ -123,6 +123,16 @@ namespace KursovaiJEY.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_body_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-body-48", resourceCulture);

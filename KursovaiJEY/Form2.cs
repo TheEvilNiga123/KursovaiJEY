@@ -57,5 +57,13 @@ namespace KursovaiJEY
             guna2TextBox3.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
         }
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Hide(); //прятки с форм 2
+            Form2 reg = new Form2(); //создаёт  переменную форм 2
+            Form1 avt = new Form1(); //создаёт переменную форм 1
+            avt.ShowDialog(); // открывается форма2 
+            reg.Close(); //открываетсч форм 1
+        }
     }
 }
