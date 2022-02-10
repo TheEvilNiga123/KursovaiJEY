@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace KursovaiJEY
             Application.Run(new Form1());
         }
     }
+
     public class DBconnect
     {
         MySqlConnection connection = new MySqlConnection("server=caseum.ru;port=33333;user=st_1_5_19;database=st_1_5_19;password=74917110;");
@@ -41,5 +43,10 @@ namespace KursovaiJEY
             return connection;
         }
     }
-    //static class ClientData
+    static class ClientData
+    {
+        
+        public static string lvl;
+
+    }
 }

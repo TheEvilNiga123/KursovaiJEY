@@ -69,6 +69,7 @@ namespace KursovaiJEY
             if (guna2TextBox2.Text == guna2TextBox6.Text)
             {
                 MessageBox.Show("Пароль и логин не могут быть одинаковыми");
+                return;
             }
             else if (guna2TextBox2.Text == guna2TextBox3.Text)
             {
@@ -87,7 +88,7 @@ namespace KursovaiJEY
                 //MessageBox.Show(test);
 
                 //MessageBox.Show("Логин и пароль введены");
-                MySqlCommand command2 = new MySqlCommand("INSERT INTO Client (idAC, FIO, Telephone, Address) VALUES (@1, @2, @3, @4)", connection.GetConnection());
+                MySqlCommand command2 = new MySqlCommand("INSERT INTO Client (idAC, FIO, Telephone, Address, Lvl) VALUES (@1, @2, @3, @4, @5)", connection.GetConnection());
                 command2.Parameters.Add("@1", MySqlDbType.VarChar).Value = test;
 
                 if(guna2TextBox1.Text == "" ^ guna2TextBox1.Text.Any(char.IsDigit))
@@ -102,6 +103,7 @@ namespace KursovaiJEY
 
                 command2.Parameters.Add("@3", MySqlDbType.VarChar).Value = guna2TextBox4.Text;
                 command2.Parameters.Add("@4", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
+                command2.Parameters.Add("@5", MySqlDbType.VarChar).Value = 1;
                 command2.ExecuteNonQuery();
 
             }
@@ -235,11 +237,11 @@ namespace KursovaiJEY
             }
             if (guna2TextBox2.PlaceholderText == "Пароль")
             {
-                guna2TextBox2.PlaceholderText = "Pass_!.()";
+                guna2TextBox2.PlaceholderText = "Pass123_!.()";
             }
             if (guna2TextBox3.PlaceholderText == "Повторите пароль")
             {
-                guna2TextBox3.PlaceholderText = "Pass_!.()";
+                guna2TextBox3.PlaceholderText = "Pass123_!.()";
             }
             else 
             {
@@ -275,5 +277,6 @@ namespace KursovaiJEY
                 e.Handled = true;
             }
         }
+
     }
 }

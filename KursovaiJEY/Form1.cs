@@ -46,6 +46,7 @@ namespace KursovaiJEY
 
             if (table.Rows.Count > 0) //Есть значения - выполняется вход
             {
+                
                 Hide(); //прятки с форм 1
                 Form1 avt = new Form1(); //создаёт  переменную форм 1
                 Form3 menu = new Form3(); //создаёт переменную форм 2
@@ -82,5 +83,26 @@ namespace KursovaiJEY
             guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
         }
 
+        private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

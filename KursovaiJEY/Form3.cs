@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace KursovaiJEY
         {
 
         }
+
 
         private void guna2ControlBox1_Click_1(object sender, EventArgs e)
         {
@@ -113,6 +115,11 @@ namespace KursovaiJEY
                 listBox2.Visible = true;
                 guna2Button7.Visible = true;
             }
+        }
+        
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
