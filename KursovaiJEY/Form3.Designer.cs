@@ -34,6 +34,8 @@ namespace KursovaiJEY
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -56,8 +58,6 @@ namespace KursovaiJEY
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -96,6 +96,60 @@ namespace KursovaiJEY
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(171, 451);
             this.guna2Panel2.TabIndex = 7;
+            // 
+            // guna2Button13
+            // 
+            this.guna2Button13.Animated = true;
+            this.guna2Button13.AutoRoundedCorners = true;
+            this.guna2Button13.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button13.BorderRadius = 21;
+            this.guna2Button13.CheckedState.Parent = this.guna2Button13;
+            this.guna2Button13.CustomImages.Parent = this.guna2Button13;
+            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button13.DisabledState.Parent = this.guna2Button13;
+            this.guna2Button13.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button13.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button13.HoverState.Parent = this.guna2Button13;
+            this.guna2Button13.IndicateFocus = true;
+            this.guna2Button13.Location = new System.Drawing.Point(7, 385);
+            this.guna2Button13.Name = "guna2Button13";
+            this.guna2Button13.ShadowDecoration.Parent = this.guna2Button13;
+            this.guna2Button13.Size = new System.Drawing.Size(95, 45);
+            this.guna2Button13.TabIndex = 22;
+            this.guna2Button13.Text = "Список клиентов";
+            this.guna2Button13.UseTransparentBackground = true;
+            this.guna2Button13.Visible = false;
+            // 
+            // guna2Button12
+            // 
+            this.guna2Button12.Animated = true;
+            this.guna2Button12.AutoRoundedCorners = true;
+            this.guna2Button12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button12.BorderRadius = 21;
+            this.guna2Button12.CheckedState.Parent = this.guna2Button12;
+            this.guna2Button12.CustomImages.Parent = this.guna2Button12;
+            this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button12.DisabledState.Parent = this.guna2Button12;
+            this.guna2Button12.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button12.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button12.HoverState.Parent = this.guna2Button12;
+            this.guna2Button12.IndicateFocus = true;
+            this.guna2Button12.Location = new System.Drawing.Point(7, 332);
+            this.guna2Button12.Name = "guna2Button12";
+            this.guna2Button12.ShadowDecoration.Parent = this.guna2Button12;
+            this.guna2Button12.Size = new System.Drawing.Size(95, 45);
+            this.guna2Button12.TabIndex = 21;
+            this.guna2Button12.Text = "Список сотрудников";
+            this.guna2Button12.UseTransparentBackground = true;
+            this.guna2Button12.Visible = false;
             // 
             // guna2Button1
             // 
@@ -553,59 +607,6 @@ namespace KursovaiJEY
             this.guna2Button11.Text = "Завершённые  СОТРУД";
             this.guna2Button11.UseTransparentBackground = true;
             this.guna2Button11.Visible = false;
-            // 
-            // guna2Button12
-            // 
-            this.guna2Button12.Animated = true;
-            this.guna2Button12.AutoRoundedCorners = true;
-            this.guna2Button12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button12.BorderRadius = 21;
-            this.guna2Button12.CheckedState.Parent = this.guna2Button12;
-            this.guna2Button12.CustomImages.Parent = this.guna2Button12;
-            this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button12.DisabledState.Parent = this.guna2Button12;
-            this.guna2Button12.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button12.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2Button12.HoverState.Parent = this.guna2Button12;
-            this.guna2Button12.IndicateFocus = true;
-            this.guna2Button12.Location = new System.Drawing.Point(7, 332);
-            this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.ShadowDecoration.Parent = this.guna2Button12;
-            this.guna2Button12.Size = new System.Drawing.Size(95, 45);
-            this.guna2Button12.TabIndex = 21;
-            this.guna2Button12.UseTransparentBackground = true;
-            this.guna2Button12.Visible = false;
-            // 
-            // guna2Button13
-            // 
-            this.guna2Button13.Animated = true;
-            this.guna2Button13.AutoRoundedCorners = true;
-            this.guna2Button13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button13.BorderRadius = 21;
-            this.guna2Button13.CheckedState.Parent = this.guna2Button13;
-            this.guna2Button13.CustomImages.Parent = this.guna2Button13;
-            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button13.DisabledState.Parent = this.guna2Button13;
-            this.guna2Button13.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button13.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2Button13.HoverState.Parent = this.guna2Button13;
-            this.guna2Button13.IndicateFocus = true;
-            this.guna2Button13.Location = new System.Drawing.Point(7, 385);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.ShadowDecoration.Parent = this.guna2Button13;
-            this.guna2Button13.Size = new System.Drawing.Size(95, 45);
-            this.guna2Button13.TabIndex = 22;
-            this.guna2Button13.Text = "Список клиентов";
-            this.guna2Button13.UseTransparentBackground = true;
-            this.guna2Button13.Visible = false;
             // 
             // Form3
             // 
