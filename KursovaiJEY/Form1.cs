@@ -56,7 +56,12 @@ namespace KursovaiJEY
 
             else //Иначе аккаунта нету или данные ведены неверно
             {
-                MessageBox.Show("Неверный логин или пароль");
+                if (listBox1.Items.Contains("Неверный логин или пароль") == false) 
+                {
+                    listBox1.Items.Add("Неверный логин или пароль");
+                }
+
+
             }    
 
         }
@@ -67,20 +72,22 @@ namespace KursovaiJEY
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e) // работает, когда меняется прочеканность свича
-         {
-            if (guna2ToggleSwitch1.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
-            {
-                guna2TextBox2.UseSystemPasswordChar = true;
-            }
-            else if (guna2ToggleSwitch1.Checked == false) // если не активирован, то всё по дефолту
-            {
-                guna2TextBox2.UseSystemPasswordChar = false;
-            }
+        {
+                if (guna2ToggleSwitch1.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
+                {
+                    guna2TextBox2.UseSystemPasswordChar = true;
+                }
+                else  // если не активирован, то всё по дефолту
+                {
+                    guna2TextBox2.UseSystemPasswordChar = false;
+                }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+            guna2ToggleSwitch1.Visible = false;
+
         }
 
         private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -102,6 +109,19 @@ namespace KursovaiJEY
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text != "")
+            {
+                guna2ToggleSwitch1.Visible = true;
+            }
+            else if (guna2TextBox2.Text == "")
+            {
+                guna2ToggleSwitch1.Visible = false;
+                guna2ToggleSwitch1.Checked = true;
             }
         }
     }

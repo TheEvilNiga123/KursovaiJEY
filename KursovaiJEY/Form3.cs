@@ -200,5 +200,10 @@ namespace KursovaiJEY
                 guna2DataGridView1.Visible = true;
             }
         }
+
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

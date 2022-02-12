@@ -48,6 +48,7 @@ namespace KursovaiJEY
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -288,7 +289,7 @@ namespace KursovaiJEY
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button1.BorderRadius = 17;
-            this.guna2Button1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Button1.BorderThickness = 1;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -339,6 +340,7 @@ namespace KursovaiJEY
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(200, 36);
             this.guna2TextBox2.TabIndex = 2;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             this.guna2TextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox2_KeyPress);
             // 
             // guna2TextBox1
@@ -445,6 +447,16 @@ namespace KursovaiJEY
             this.guna2Button2.UseTransparentBackground = true;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Gray;
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(26, 413);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(272, 17);
+            this.listBox1.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +465,7 @@ namespace KursovaiJEY
             this.BackgroundImage = global::KursovaiJEY.Properties.Resources.faro_grau_bunt_ldf;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(322, 439);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -488,5 +501,6 @@ namespace KursovaiJEY
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

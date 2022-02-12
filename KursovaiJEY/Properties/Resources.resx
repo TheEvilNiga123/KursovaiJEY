@@ -124,6 +124,9 @@
   <data name="icons8-body-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-body-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1599292667310" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1599292667310.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1614383689_4-p-fon-derevyannie-doski-svetlie-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1614383689_4-p-fon-derevyannie-doski-svetlie-4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,17 +136,14 @@
   <data name="faro_grau-bunt_ldf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\faro_grau-bunt_ldf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-house-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-house-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Скриншот 06-02-2022 223335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Скриншот 06-02-2022 223335.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-login-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-login-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-back-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-back-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-вопросительный-знак-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-вопросительный-знак-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-body-67" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-body-67.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,9 +160,6 @@
   <data name="icons8-calendar-128 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-calendar-128 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-шлюз-voip-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-шлюз-voip-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Скриншот 06-02-2022 223855" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Скриншот 06-02-2022 223855.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +175,8 @@
   <data name="icons8-calendar-128 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-calendar-128 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1599292667310" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1599292667310.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-house-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-house-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Скриншот 06-02-2022 225555" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Скриншот 06-02-2022 225555.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +190,20 @@
   <data name="IMG_20191211_232441_791" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_20191211_232441_791.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1486486302-arrow-down-downloading-storage-download-save_81227" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486486302-arrow-down-downloading-storage-download-save_81227.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Скриншот 06-02-2022 225508" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Скриншот 06-02-2022 225508.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-шлюз-voip-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-шлюз-voip-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-vk-в-круге-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-vk-в-круге-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1486486302-arrow-down-downloading-storage-download-save_81227" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486486302-arrow-down-downloading-storage-download-save_81227.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-back-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-back-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Скриншот 08-02-2022 161544" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Скриншот 08-02-2022 161544.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,7 @@
   <data name="1614338139_68-p-svetloe-derevo-fon-94" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1614338139_68-p-svetloe-derevo-fon-94.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-вопросительный-знак-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-вопросительный-знак-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-заполненная-тема-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-заполненная-тема-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

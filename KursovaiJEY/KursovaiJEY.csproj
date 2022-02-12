@@ -247,5 +247,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-вопросительный-знак-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-заполненная-тема-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

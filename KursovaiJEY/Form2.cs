@@ -23,35 +23,42 @@ namespace KursovaiJEY
         private void guna2Button1_Click(object sender, EventArgs e)
 
         {
-
-            if (guna2TextBox6.Text == "")
-            {
-                MessageBox.Show("Введите логин пользователя");
-                return;
-            }
-            if (guna2TextBox2.Text == "")
-            {
-                MessageBox.Show("Введите пароль");
-                return;
-            }
-            else if (guna2TextBox3.Text == "")
-            {
-                MessageBox.Show("Введите повторный пароль");
-                return;
-            }
             if (guna2TextBox1.Text == "")
             {
-                MessageBox.Show("Введите фио пользователя");
+                guna2TextBox1.PlaceholderText = "Введите фио пользователя";
+                guna2TextBox1.PlaceholderForeColor = Color.Red;
                 return;
             }
             if (guna2TextBox4.Text == "")
             {
-                MessageBox.Show("Введите номер телефона ");
+                guna2TextBox4.PlaceholderText = "Введите номер телефона";
+                guna2TextBox4.PlaceholderForeColor = Color.Red;
                 return;
             }
             if (guna2TextBox5.Text == "")
             {
-                MessageBox.Show("Введите адресс");
+                guna2TextBox5.PlaceholderText = "Введите адресс";
+                guna2TextBox5.PlaceholderForeColor = Color.Red;
+                return;
+            }
+
+            if (guna2TextBox6.Text == "")
+            {
+                guna2TextBox6.PlaceholderText = "Введите логин пользователя";
+                guna2TextBox6.PlaceholderForeColor = Color.Red;
+                return;
+            }
+
+            if (guna2TextBox2.Text == "")
+            {
+                guna2TextBox2.PlaceholderText = "Введите пароль";
+                guna2TextBox2.PlaceholderForeColor = Color.Red;
+                return;
+            }
+            else if (guna2TextBox3.Text == "")
+            {
+                guna2TextBox3.PlaceholderText = "Введите повторный пароль";
+                guna2TextBox3.PlaceholderForeColor = Color.Red;
                 return;
             }
 
@@ -68,8 +75,13 @@ namespace KursovaiJEY
 
             if (guna2TextBox2.Text == guna2TextBox6.Text)
             {
-                MessageBox.Show("Пароль и логин не могут быть одинаковыми");
-                return;
+                if (listBox1.Items.Contains("Пароль и логин не могут быть одинаковыми") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Пароль и логин не могут быть одинаковыми");
+                }
+                 return;
+
             }
             else if (guna2TextBox2.Text == guna2TextBox3.Text)
             {
@@ -77,7 +89,12 @@ namespace KursovaiJEY
             }
             else
             {
-                  MessageBox.Show("Ведённые пароли не совпадают");
+                if (listBox1.Items.Contains("Ведённые пароли не совпадают") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Ведённые пароли не совпадают");
+                }
+               
                   return;
             }
 
@@ -109,8 +126,9 @@ namespace KursovaiJEY
             }
                 
               else
-                  MessageBox.Show("Логин и пароль не ушли");
-                  connection.closeConnection();
+                listBox1.Items.Clear();
+                listBox1.Items.Add("Логин и пароль не ушли");
+               connection.closeConnection();
 
 
 
@@ -140,7 +158,8 @@ namespace KursovaiJEY
 
             if (table.Rows.Count > 0) //Есть значения - выполняется вход
             {
-                MessageBox.Show("Логин уже занят");
+                listBox1.Items.Clear();
+                listBox1.Items.Add("Логин уже занят");
                 return true;
             }
 
@@ -177,6 +196,7 @@ namespace KursovaiJEY
         {
             guna2TextBox2.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2TextBox3.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+            guna2ToggleSwitch1.Visible = false;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -219,13 +239,15 @@ namespace KursovaiJEY
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            listBox1.Items.Add("Режим подсказок включен");
             if (guna2TextBox1.PlaceholderText == "ФИО")
             {
                 guna2TextBox1.PlaceholderText = "Иванов Иван Иванович";
             }
             if (guna2TextBox4.PlaceholderText == "Номер телефона")
             {
-                guna2TextBox4.PlaceholderText = "89777777777";
+                guna2TextBox4.PlaceholderText = "89123456789";
             }
             if (guna2TextBox5.PlaceholderText == "Адресс проживания")
             {
@@ -245,7 +267,8 @@ namespace KursovaiJEY
             }
             else 
             {
-
+                listBox1.Items.Clear();
+                listBox1.Items.Add("Режим подсказок выключен");
                 guna2TextBox1.PlaceholderText = "ФИО";
                 guna2TextBox4.PlaceholderText = "Номер телефона";
                 guna2TextBox5.PlaceholderText = "Адресс проживания";
@@ -278,5 +301,17 @@ namespace KursovaiJEY
             }
         }
 
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text != "" )
+            {
+                guna2ToggleSwitch1.Visible = true;
+            }
+            else if (guna2TextBox2.Text == "")
+            {
+                guna2ToggleSwitch1.Visible = false;
+                guna2ToggleSwitch1.Checked = true;
+            }
+        }
     }
 }

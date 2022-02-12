@@ -30,9 +30,9 @@ namespace KursovaiJEY
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -65,7 +65,6 @@ namespace KursovaiJEY
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
@@ -118,6 +117,7 @@ namespace KursovaiJEY
             this.guna2Button13.AutoRoundedCorners = true;
             this.guna2Button13.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button13.BorderRadius = 21;
+            this.guna2Button13.BorderThickness = 1;
             this.guna2Button13.CheckedState.Parent = this.guna2Button13;
             this.guna2Button13.CustomImages.Parent = this.guna2Button13;
             this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -145,6 +145,7 @@ namespace KursovaiJEY
             this.guna2Button12.AutoRoundedCorners = true;
             this.guna2Button12.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button12.BorderRadius = 21;
+            this.guna2Button12.BorderThickness = 1;
             this.guna2Button12.CheckedState.Parent = this.guna2Button12;
             this.guna2Button12.CustomImages.Parent = this.guna2Button12;
             this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -273,6 +274,7 @@ namespace KursovaiJEY
             this.guna2Button6.AutoRoundedCorners = true;
             this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button6.BorderRadius = 21;
+            this.guna2Button6.BorderThickness = 1;
             this.guna2Button6.CheckedState.Parent = this.guna2Button6;
             this.guna2Button6.CustomImages.Parent = this.guna2Button6;
             this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -300,6 +302,7 @@ namespace KursovaiJEY
             this.guna2Button5.AutoRoundedCorners = true;
             this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button5.BorderRadius = 21;
+            this.guna2Button5.BorderThickness = 1;
             this.guna2Button5.CheckedState.Parent = this.guna2Button5;
             this.guna2Button5.CustomImages.Parent = this.guna2Button5;
             this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -354,6 +357,7 @@ namespace KursovaiJEY
             this.guna2Button3.AutoRoundedCorners = true;
             this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button3.BorderRadius = 21;
+            this.guna2Button3.BorderThickness = 1;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.CustomImages.Parent = this.guna2Button3;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -392,6 +396,7 @@ namespace KursovaiJEY
             this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button2.BorderRadius = 21;
+            this.guna2Button2.BorderThickness = 1;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -453,7 +458,7 @@ namespace KursovaiJEY
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = global::KursovaiJEY.Properties.Resources.Скриншот_08_02_2022_163456;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(125, 84);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(131, 82);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
             this.guna2PictureBox3.Size = new System.Drawing.Size(460, 311);
@@ -521,6 +526,7 @@ namespace KursovaiJEY
             this.guna2Button8.AutoRoundedCorners = true;
             this.guna2Button8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button8.BorderRadius = 21;
+            this.guna2Button8.BorderThickness = 1;
             this.guna2Button8.CheckedState.Parent = this.guna2Button8;
             this.guna2Button8.CustomImages.Parent = this.guna2Button8;
             this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -549,6 +555,7 @@ namespace KursovaiJEY
             this.guna2Button9.AutoRoundedCorners = true;
             this.guna2Button9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button9.BorderRadius = 21;
+            this.guna2Button9.BorderThickness = 1;
             this.guna2Button9.CheckedState.Parent = this.guna2Button9;
             this.guna2Button9.CustomImages.Parent = this.guna2Button9;
             this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -577,6 +584,7 @@ namespace KursovaiJEY
             this.guna2Button10.AutoRoundedCorners = true;
             this.guna2Button10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button10.BorderRadius = 21;
+            this.guna2Button10.BorderThickness = 1;
             this.guna2Button10.CheckedState.Parent = this.guna2Button10;
             this.guna2Button10.CustomImages.Parent = this.guna2Button10;
             this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -604,6 +612,7 @@ namespace KursovaiJEY
             this.guna2Button11.AutoRoundedCorners = true;
             this.guna2Button11.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button11.BorderRadius = 21;
+            this.guna2Button11.BorderThickness = 1;
             this.guna2Button11.CheckedState.Parent = this.guna2Button11;
             this.guna2Button11.CustomImages.Parent = this.guna2Button11;
             this.guna2Button11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -627,33 +636,33 @@ namespace KursovaiJEY
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(136, 51);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(136, 67);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -670,7 +679,7 @@ namespace KursovaiJEY
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -689,7 +698,6 @@ namespace KursovaiJEY
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel4.Controls.Add(this.guna2Button14);
             this.guna2Panel4.Controls.Add(this.label2);
-            this.guna2Panel4.Controls.Add(this.guna2TextBox6);
             this.guna2Panel4.Controls.Add(this.guna2TextBox5);
             this.guna2Panel4.Controls.Add(this.guna2TextBox4);
             this.guna2Panel4.Controls.Add(this.guna2Button15);
@@ -741,38 +749,6 @@ namespace KursovaiJEY
             this.label2.TabIndex = 0;
             this.label2.Text = "Форма заявки";
             // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.AutoRoundedCorners = true;
-            this.guna2TextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox6.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox6.BorderRadius = 17;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.IconLeft = global::KursovaiJEY.Properties.Resources.icons8_body_67;
-            this.guna2TextBox6.Location = new System.Drawing.Point(37, 189);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox6.PlaceholderText = "???";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
-            this.guna2TextBox6.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox6.TabIndex = 9;
-            // 
             // guna2TextBox5
             // 
             this.guna2TextBox5.Animated = true;
@@ -799,7 +775,7 @@ namespace KursovaiJEY
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox5.PlaceholderText = "Адресс проживания";
+            this.guna2TextBox5.PlaceholderText = "Адрес";
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
             this.guna2TextBox5.Size = new System.Drawing.Size(200, 36);
@@ -844,7 +820,7 @@ namespace KursovaiJEY
             this.guna2Button15.AutoRoundedCorners = true;
             this.guna2Button15.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button15.BorderRadius = 17;
-            this.guna2Button15.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Button15.BorderThickness = 1;
             this.guna2Button15.CheckedState.Parent = this.guna2Button15;
             this.guna2Button15.CustomImages.Parent = this.guna2Button15;
             this.guna2Button15.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -854,14 +830,15 @@ namespace KursovaiJEY
             this.guna2Button15.DisabledState.Parent = this.guna2Button15;
             this.guna2Button15.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2Button15.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button15.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button15.ForeColor = System.Drawing.Color.Black;
             this.guna2Button15.HoverState.Parent = this.guna2Button15;
             this.guna2Button15.Location = new System.Drawing.Point(38, 324);
             this.guna2Button15.Name = "guna2Button15";
             this.guna2Button15.ShadowDecoration.Parent = this.guna2Button15;
             this.guna2Button15.Size = new System.Drawing.Size(200, 37);
             this.guna2Button15.TabIndex = 3;
-            this.guna2Button15.Text = "Подать заявку на усмотрение";
+            this.guna2Button15.Text = "Отправить";
+            this.guna2Button15.Click += new System.EventHandler(this.guna2Button15_Click);
             // 
             // guna2TextBox2
             // 
@@ -869,7 +846,7 @@ namespace KursovaiJEY
             this.guna2TextBox2.AutoRoundedCorners = true;
             this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2TextBox2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.BorderRadius = 42;
+            this.guna2TextBox2.BorderRadius = 63;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -884,15 +861,15 @@ namespace KursovaiJEY
             this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.IconLeft = global::KursovaiJEY.Properties.Resources.icons8_пароль_48;
-            this.guna2TextBox2.Location = new System.Drawing.Point(37, 231);
+            this.guna2TextBox2.IconLeft = global::KursovaiJEY.Properties.Resources.icons8_заполненная_тема_24;
+            this.guna2TextBox2.Location = new System.Drawing.Point(37, 189);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox2.PlaceholderText = "Пароль";
+            this.guna2TextBox2.PlaceholderText = "Текст обращения";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(200, 87);
+            this.guna2TextBox2.Size = new System.Drawing.Size(200, 129);
             this.guna2TextBox2.TabIndex = 2;
             // 
             // guna2TextBox1
@@ -1000,7 +977,6 @@ namespace KursovaiJEY
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button14;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button15;
