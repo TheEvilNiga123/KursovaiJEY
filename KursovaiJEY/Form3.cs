@@ -67,8 +67,14 @@ namespace KursovaiJEY
                 guna2PictureBox3.Visible = false;
                 listBox2.Visible = false;
                 guna2Button7.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button10.Visible = false;
+                guna2Button11.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Panel4.Visible = false;
                 listBox1.Visible = true;
-  
+
             }
             else
             {
@@ -85,6 +91,12 @@ namespace KursovaiJEY
                 guna2PictureBox2.Visible = false;
                 listBox2.Visible = false;
                 guna2Button7.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button10.Visible = false;
+                guna2Button11.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Panel4.Visible = false;
                 guna2PictureBox3.Visible = true;
             }
 
@@ -106,8 +118,15 @@ namespace KursovaiJEY
                 listBox1.Visible = false;
                 guna2PictureBox2.Visible = false;
                 guna2PictureBox3.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button10.Visible = false;
+                guna2Button11.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Panel4.Visible = false;
                 listBox2.Visible = true;
                 guna2Button7.Visible = true;
+
             }
 
             else
@@ -119,7 +138,67 @@ namespace KursovaiJEY
         
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            if (guna2Button8.Visible == false && guna2Button9.Visible == false)
+            {
+                listBox1.Visible = false;
+                guna2PictureBox2.Visible = false;
+                guna2PictureBox3.Visible = false;
+                listBox2.Visible = false;
+                guna2Button7.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Panel4.Visible = false;
+                guna2Button8.Visible = true;
+                guna2Button9.Visible = true;
 
+            }
+
+            else
+            {
+                guna2Button8.Visible = true;
+                guna2Button9.Visible = true;
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            if (guna2Panel4.Visible == false)
+            {
+                listBox1.Visible = false;
+                guna2PictureBox2.Visible = false;
+                guna2PictureBox3.Visible = false;
+                listBox2.Visible = false;
+                guna2Button7.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Button8.Visible = true;
+                guna2Button9.Visible = true;
+                guna2Panel4.Visible = true;
+            }
+
+            else
+            {
+                guna2Panel4.Visible = true;
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView1.Visible == false)
+            {
+                listBox1.Visible = false;
+                guna2PictureBox2.Visible = false;
+                guna2PictureBox3.Visible = false;
+                listBox2.Visible = false;
+                guna2Button7.Visible = false;
+                guna2Panel4.Visible = false;
+                guna2Button8.Visible = true;
+                guna2Button9.Visible = true;
+                guna2DataGridView1.Visible = true;
+            }
+
+            else
+            {
+                guna2DataGridView1.Visible = true;
+            }
         }
     }
 }
