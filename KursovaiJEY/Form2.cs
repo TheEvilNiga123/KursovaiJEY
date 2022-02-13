@@ -35,6 +35,17 @@ namespace KursovaiJEY
                 guna2TextBox4.PlaceholderForeColor = Color.Red;
                 return;
             }
+            if (guna2TextBox4.TextLength < 11)
+            {
+                if (listBox1.Items.Contains("Длина телефона меньше допустимой. Минимальная длина 11 символов.") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Длина телефона меньше 11 символов.");
+                    return;
+
+                }
+
+            }
             if (guna2TextBox5.Text == "")
             {
                 guna2TextBox5.PlaceholderText = "Введите адресс";
@@ -102,9 +113,7 @@ namespace KursovaiJEY
             {
                 MySqlCommand command3 = new MySqlCommand("SELECT MAX(`idAC`) FROM `ALP`", connection.GetConnection());
                 string test = command3.ExecuteScalar().ToString();
-                //MessageBox.Show(test);
-
-                //MessageBox.Show("Логин и пароль введены");
+                
                 MySqlCommand command2 = new MySqlCommand("INSERT INTO Client (idAC, FIO, Telephone, Address, Lvl) VALUES (@1, @2, @3, @4, @5)", connection.GetConnection());
                 command2.Parameters.Add("@1", MySqlDbType.VarChar).Value = test;
 
@@ -209,12 +218,10 @@ namespace KursovaiJEY
         }
         private void guna2TextBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && 
-            (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-
         }
 
         private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -249,7 +256,7 @@ namespace KursovaiJEY
             {
                 guna2TextBox4.PlaceholderText = "89123456789";
             }
-            if (guna2TextBox5.PlaceholderText == "Адресс проживания")
+            if (guna2TextBox5.PlaceholderText == "Адрес проживания")
             {
                 guna2TextBox5.PlaceholderText = "Двинская 3";
             }
@@ -313,5 +320,6 @@ namespace KursovaiJEY
                 guna2ToggleSwitch1.Checked = true;
             }
         }
+
     }
 }

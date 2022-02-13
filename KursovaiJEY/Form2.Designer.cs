@@ -186,7 +186,7 @@ namespace KursovaiJEY
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox5.PlaceholderText = "Адресс проживания";
+            this.guna2TextBox5.PlaceholderText = "Адрес проживания";
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
             this.guna2TextBox5.Size = new System.Drawing.Size(200, 36);
