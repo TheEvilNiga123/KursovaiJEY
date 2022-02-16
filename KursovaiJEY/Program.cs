@@ -43,10 +43,15 @@ namespace KursovaiJEY
             return connection;
         }
     }
-    static class ClientData
+    static class SaveData
     {
-        
-        public static string lvl;
+        public static int IDC;
+        public static string LOGINC;
+        public static string PASSWORDC;
+        public static string FIOC;
+        public static string TELEPHONEC;
+        public static string ADDRESSC;
+        public static int LVLC;
 
     }
 }

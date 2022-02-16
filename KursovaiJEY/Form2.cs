@@ -79,11 +79,11 @@ namespace KursovaiJEY
             DBconnect connection = new DBconnect();
             connection.openConnection();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `ALP` (`login`, `pass`) VALUES (@uL, @uP)", connection.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `ALP` (`login`, `pass`, `lvl`) VALUES (@uL, @uP, @uLV)", connection.GetConnection());
 
 
               command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = guna2TextBox6.Text;
-
+              command.Parameters.Add("@uLV", MySqlDbType.VarChar).Value = 1;
             if (guna2TextBox2.Text == guna2TextBox6.Text)
             {
                 if (listBox1.Items.Contains("Пароль и логин не могут быть одинаковыми") == false)
@@ -108,13 +108,12 @@ namespace KursovaiJEY
                
                   return;
             }
-
             if (command.ExecuteNonQuery() == 1) 
             {
                 MySqlCommand command3 = new MySqlCommand("SELECT MAX(`idAC`) FROM `ALP`", connection.GetConnection());
                 string test = command3.ExecuteScalar().ToString();
                 
-                MySqlCommand command2 = new MySqlCommand("INSERT INTO Client (idAC, FIO, Telephone, Address, Lvl) VALUES (@1, @2, @3, @4, @5)", connection.GetConnection());
+                MySqlCommand command2 = new MySqlCommand("INSERT INTO Client (idAC, FIO, Telephone, Address) VALUES (@1, @2, @3, @4)", connection.GetConnection());
                 command2.Parameters.Add("@1", MySqlDbType.VarChar).Value = test;
 
                 if(guna2TextBox1.Text == "" ^ guna2TextBox1.Text.Any(char.IsDigit))
@@ -129,7 +128,6 @@ namespace KursovaiJEY
 
                 command2.Parameters.Add("@3", MySqlDbType.VarChar).Value = guna2TextBox4.Text;
                 command2.Parameters.Add("@4", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
-                command2.Parameters.Add("@5", MySqlDbType.VarChar).Value = 1;
                 command2.ExecuteNonQuery();
 
             }

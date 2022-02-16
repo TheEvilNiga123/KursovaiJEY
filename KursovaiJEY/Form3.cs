@@ -21,7 +21,24 @@ namespace KursovaiJEY
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            label1.Text = SaveData.LOGINC;
+            string lvl = SaveData.LVLC.ToString();
+            label3.Text = lvl;
+            if (SaveData.LVLC == 1)
+            {
+                guna2Button12.Visible = false;
+                guna2Button13.Visible = false;
+            }
+            if (SaveData.LVLC == 2)
+            {
+                guna2Button12.Visible = false;
+                guna2Button13.Visible = false;
+            }
+            if (SaveData.LVLC == 3)
+            {
+                guna2Button12.Visible = true;
+                guna2Button13.Visible = true;
+            }
         }
 
 
@@ -48,8 +65,16 @@ namespace KursovaiJEY
         {
             if (guna2PictureBox2.Visible == false)
             {
-                listBox1.Visible = false;
                 guna2PictureBox3.Visible = false;
+                listBox2.Visible = false;
+                guna2Button7.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button10.Visible = false;
+                guna2Button11.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2Panel4.Visible = false;
+                listBox1.Visible = false;
                 guna2PictureBox2.Visible = true;
             }
 
@@ -138,24 +163,75 @@ namespace KursovaiJEY
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            if (guna2Button8.Visible == false && guna2Button9.Visible == false)
+            if (SaveData.LVLC == 1)//клиент
             {
-                listBox1.Visible = false;
-                guna2PictureBox2.Visible = false;
-                guna2PictureBox3.Visible = false;
-                listBox2.Visible = false;
-                guna2Button7.Visible = false;
-                guna2DataGridView1.Visible = false;
-                guna2Panel4.Visible = false;
-                guna2Button8.Visible = true;
-                guna2Button9.Visible = true;
+                if (guna2Button8.Visible == false && guna2Button9.Visible == false)
+                {
+                    listBox1.Visible = false;
+                    guna2PictureBox2.Visible = false;
+                    guna2PictureBox3.Visible = false;
+                    listBox2.Visible = false;
+                    guna2Button7.Visible = false;
+                    guna2DataGridView1.Visible = false;
+                    guna2Panel4.Visible = false;
+                    guna2Button8.Visible = true;
+                    guna2Button9.Visible = true;
+                }
 
+                else
+                {
+                    guna2Button8.Visible = true;
+                    guna2Button9.Visible = true;
+                }
             }
-
-            else
+            if (SaveData.LVLC == 2)//сотрудник
             {
-                guna2Button8.Visible = true;
-                guna2Button9.Visible = true;
+                if (guna2Button8.Visible == false && guna2Button9.Visible == false)
+                {
+                    listBox1.Visible = false;
+                    guna2PictureBox2.Visible = false;
+                    guna2PictureBox3.Visible = false;
+                    listBox2.Visible = false;
+                    guna2Button7.Visible = false;
+                    guna2DataGridView1.Visible = false;
+                    guna2Panel4.Visible = false;
+                    guna2Button8.Visible = false;
+                    guna2Button9.Visible = true;
+                    guna2Button10.Visible = true;
+                    guna2Button11.Visible = true;
+                }
+
+                else
+                {
+                    guna2Button9.Visible = true;
+                    guna2Button10.Visible = true;
+                    guna2Button11.Visible = true;
+                }
+            }
+            if (SaveData.LVLC == 3) //админ
+            {
+                if (guna2Button8.Visible == false && guna2Button9.Visible == false)
+                {
+                    listBox1.Visible = false;
+                    guna2PictureBox2.Visible = false;
+                    guna2PictureBox3.Visible = false;
+                    listBox2.Visible = false;
+                    guna2Button7.Visible = false;
+                    guna2DataGridView1.Visible = false;
+                    guna2Panel4.Visible = false;
+                    guna2Button8.Visible = true;
+                    guna2Button9.Visible = true;
+                    guna2Button10.Visible = true;
+                    guna2Button11.Visible = true;
+                }
+
+                else
+                {
+                    guna2Button8.Visible = true;
+                    guna2Button9.Visible = true;
+                    guna2Button10.Visible = true;
+                    guna2Button11.Visible = true;
+                }
             }
         }
 
@@ -170,7 +246,6 @@ namespace KursovaiJEY
                 guna2Button7.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Button8.Visible = true;
-                guna2Button9.Visible = true;
                 guna2Panel4.Visible = true;
             }
 
@@ -190,7 +265,6 @@ namespace KursovaiJEY
                 listBox2.Visible = false;
                 guna2Button7.Visible = false;
                 guna2Panel4.Visible = false;
-                guna2Button8.Visible = true;
                 guna2Button9.Visible = true;
                 guna2DataGridView1.Visible = true;
             }
@@ -236,17 +310,32 @@ namespace KursovaiJEY
                 guna2TextBox5.PlaceholderForeColor = Color.Red;
                 return;
             }
-
+            
             DBconnect connection = new DBconnect();
             connection.openConnection();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `Claim` (`IDC`, `FIO`, `Telephone`, `AddressIncidents`, `DoI`, `DataReport`) VALUES (@I, @F, @T, @A, @D, @DR)", connection.GetConnection());
-
-            command.Parameters.Add("@DoI", MySqlDbType.VarChar).Value = guna2TextBox2.Text;
-            command.Parameters.Add("@DR", MySqlDbType.VarChar).Value = DateTime.Now;
-           
+            MySqlCommand command = new MySqlCommand("INSERT INTO `Claim` (`idAC`, `FIO`, `Telephone`, `AddressIncidents`, `DoI`, `DataReport`) VALUES (@I, @F, @T, @A, @D, @DR)", connection.GetConnection());
+            string IDK = SaveData.IDC.ToString();
+            //string DATA = DateTime.Now.ToString();
+            command.Parameters.Add("@I", MySqlDbType.VarChar).Value = IDK;
+            command.Parameters.Add("@F", MySqlDbType.VarChar).Value = guna2TextBox1.Text;
+            command.Parameters.Add("@T", MySqlDbType.VarChar).Value = guna2TextBox4.Text;
+            command.Parameters.Add("@A", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
+            command.Parameters.Add("@D", MySqlDbType.VarChar).Value = guna2TextBox2.Text;
+            command.Parameters.Add("@DR", MySqlDbType.Date).Value = DateTime.Now;
+            if (command.ExecuteNonQuery() == 1)
+            {
+                listBox3.Items.Clear();
+                listBox3.Items.Add("Заявка отправлена на усмотрение");
+            }
+            else
+            {
+                listBox3.Items.Clear();
+                listBox3.Items.Add("Ошибка, обратитесь в тех.поддержку");
+            }
+            connection.closeConnection();
         }
-
+        
         private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             char l = e.KeyChar;
