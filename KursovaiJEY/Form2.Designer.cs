@@ -107,7 +107,7 @@ namespace KursovaiJEY
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = global::KursovaiJEY.Properties.Resources.icons8_вопросительный_знак_30;
             this.guna2Button3.IndicateFocus = true;
-            this.guna2Button3.Location = new System.Drawing.Point(239, 0);
+            this.guna2Button3.Location = new System.Drawing.Point(238, 1);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(32, 26);

@@ -250,5 +250,23 @@
   <ItemGroup>
     <None Include="Resources\icons8-заполненная-тема-24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-обновить-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-удалить-навсегда-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-удалить-навсегда-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-дата-рождения-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-новое-соглашение-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\150614259159c5e97f116960.59986276.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

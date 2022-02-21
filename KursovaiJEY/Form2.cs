@@ -42,7 +42,6 @@ namespace KursovaiJEY
                     listBox1.Items.Clear();
                     listBox1.Items.Add("Длина телефона меньше 11 символов.");
                     return;
-
                 }
 
             }
@@ -130,24 +129,21 @@ namespace KursovaiJEY
                 command2.Parameters.Add("@4", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
                 command2.ExecuteNonQuery();
 
+            }  
+            else
+            {
+              listBox1.Items.Clear();
+              listBox1.Items.Add("Логин и пароль не ушли");
+              return;
             }
-                
-              else
-                listBox1.Items.Clear();
-                listBox1.Items.Add("Логин и пароль не ушли");
-               connection.closeConnection();
 
-
-
-
-
+            connection.closeConnection();
 
             Hide(); //прятки с форм 2
             Form2 reg = new Form2(); //создаёт  переменную форм 2
             Form1 avt = new Form1(); //создаёт переменную форм 1
             avt.ShowDialog(); // открывается форма2 
-            reg.Close(); //открываетсч форм 1   
-        
+            reg.Close(); //открываетсч форм 1
         }
         public Boolean checkUser()
         {
