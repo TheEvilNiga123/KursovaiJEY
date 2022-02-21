@@ -49,6 +49,11 @@ namespace KursovaiJEY
             guna2TextBox8.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2TextBox9.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2ToggleSwitch1.Visible = false;
+
+            listBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            listBox5.MeasureItem += lst_MeasureItem;
+            listBox5.DrawItem += lst_DrawItem;
+
         }
 
 
@@ -80,8 +85,6 @@ namespace KursovaiJEY
                 guna2Button7.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
-                guna2Button10.Visible = false;
-                guna2Button11.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
                 listBox1.Visible = false;
@@ -112,8 +115,6 @@ namespace KursovaiJEY
                 guna2Button7.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
-                guna2Button10.Visible = false;
-                guna2Button11.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
                 guna2DataGridView2.Visible = false;
@@ -144,8 +145,6 @@ namespace KursovaiJEY
                 guna2Button7.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
-                guna2Button10.Visible = false;
-                guna2Button11.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
                 guna2DataGridView2.Visible = false;
@@ -179,8 +178,6 @@ namespace KursovaiJEY
                 guna2PictureBox3.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
-                guna2Button10.Visible = false;
-                guna2Button11.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
                 guna2DataGridView2.Visible = false;
@@ -254,16 +251,12 @@ namespace KursovaiJEY
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
                     guna2Button9.Visible = true;
-                    guna2Button10.Visible = true;
-                    guna2Button11.Visible = true;
                     guna2Button16.Visible = true;
                 }
 
                 else
                 {
                     guna2Button9.Visible = true;
-                    guna2Button10.Visible = true;
-                    guna2Button11.Visible = true;
                     guna2Button16.Visible = true;
                 }
             }
@@ -282,10 +275,12 @@ namespace KursovaiJEY
                     listBox4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
+                    guna2DataGridView1.Visible = false;
+                    toolStrip1.Visible = false;
+                    guna2DataGridView2.Visible = false;
+                    toolStrip2.Visible = false;
                     guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
-                    guna2Button10.Visible = true;
-                    guna2Button11.Visible = true;
                     guna2Button16.Visible = true;
                 }
 
@@ -293,8 +288,6 @@ namespace KursovaiJEY
                 {
                     guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
-                    guna2Button10.Visible = true;
-                    guna2Button11.Visible = true;
                     guna2Button16.Visible = true;
 
                 }
@@ -490,9 +483,9 @@ namespace KursovaiJEY
                 listBox3.Items.Clear();
                 listBox3.Items.Add("Режим подсказок выключен");
                 guna2TextBox1.PlaceholderText = "ФИО";
-                guna2TextBox2.PlaceholderText = "Номер телефона";
-                guna2TextBox4.PlaceholderText = "Адрес";
-                guna2TextBox5.PlaceholderText = "Текст обращения";
+                guna2TextBox4.PlaceholderText = "Номер телефона";
+                guna2TextBox5.PlaceholderText = "Адрес";
+                guna2TextBox2.PlaceholderText = "Текст обращения";
             }
 
         }
@@ -638,6 +631,9 @@ namespace KursovaiJEY
                 toolStrip1.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button16.Visible = false;
                 guna2DataGridView1.Visible = true;
                 toolStrip2.Visible = true;
                 listBox4.Visible = true;
@@ -718,6 +714,9 @@ namespace KursovaiJEY
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Button9.Visible = false;
+                guna2Button16.Visible = false;
                 guna2DataGridView3.Visible = true;
                 toolStrip3.Visible = true;
                 listBox4.Visible = true;
@@ -1049,10 +1048,10 @@ namespace KursovaiJEY
                 listBox4.Items.Add("Логин уже занят");
                 return true;
             }
-
             else //аккаунт создан
+            {
                 return false;
-
+            } 
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -1224,6 +1223,54 @@ namespace KursovaiJEY
             }
             guna2DataGridView3.CurrentRow.Selected = true;
             GetSelectedIDString3();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            if (SaveData.ID_Claim != null)
+            {
+                guna2Panel6.Visible = true;
+                DBconnect connection = new DBconnect(); //Подключение к базе данных с помощью файла Program.CS
+                connection.openConnection();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
+                MySqlCommand command11 = new MySqlCommand("SELECT * FROM `Claim` WHERE `IDR` = @Ur", connection.GetConnection()); //Создание команды на выборку
+                command11.Parameters.Add("@Ur", MySqlDbType.VarChar).Value = SaveData.ID_Claim; //Заменяем шифр из команды на переменные
+                adapter.SelectCommand = command11; // адаптер выберает команду "КОММАНД"
+                MySqlDataReader reader11 = command11.ExecuteReader();
+                List<string[]> data = new List<string[]>();
+                while (reader11.Read())
+                {
+                   guna2TextBox20.Text = reader11[2].ToString();
+                   guna2TextBox17.Text = reader11[3].ToString();
+                   guna2TextBox16.Text = reader11[4].ToString();
+                   string text = reader11[5].ToString();
+                   listBox5.Items.Add($"{text}");
+                   guna2TextBox15.Text = reader11[6].ToString();
+                }
+                reader11.Close();
+                connection.closeConnection();
+            }
+            else
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не выбрали заявку, к которой хотите оставить комментарий");
+            }
+
+        }
+        private void lst_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            e.DrawFocusRectangle();
+            e.Graphics.DrawString(listBox5.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds);
+        }
+        private void lst_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            if (listBox5.Items.Count > 0)
+            {
+                e.ItemHeight = (int)e.Graphics.MeasureString(listBox5.Items[e.Index].ToString(), listBox5.Font, listBox5.Width).Height;
+                return;
+            }
+           
         }
     }
 }

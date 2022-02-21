@@ -273,6 +273,16 @@ namespace KursovaiJEY.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_комментарии_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-комментарии-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_новое_соглашение_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-новое-соглашение-48", resourceCulture);

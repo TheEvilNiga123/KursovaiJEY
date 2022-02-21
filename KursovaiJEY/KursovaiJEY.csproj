@@ -268,5 +268,8 @@
   <ItemGroup>
     <None Include="Resources\150614259159c5e97f116960.59986276.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-комментарии-24 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
