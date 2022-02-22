@@ -13,6 +13,7 @@ namespace KursovaiJEY
 {
     public partial class Form3 : Form
     {
+        int viemlvl = 0;
         string id_selected_rows = "0";
         string id_selected_rows2 = "0";
         string id_selected_rows3 = "0";
@@ -30,7 +31,7 @@ namespace KursovaiJEY
         private void Form3_Load(object sender, EventArgs e)
         {
 
-            
+
             string lvl = SaveData.LVLe.ToString();
             label3.Text = lvl;
             if (SaveData.LVLC == 1)
@@ -47,6 +48,7 @@ namespace KursovaiJEY
                 toolStripButton2.Visible = false;
                 guna2Button12.Visible = false;
                 guna2Button13.Visible = false;
+                guna2Button8.Visible = false;
                 label1.Text = SaveData.LOGINe;
             }
             if (SaveData.LVLe == 3)
@@ -255,7 +257,6 @@ namespace KursovaiJEY
                 else
                 {
                     guna2Button16.Visible = true;
-                    guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
                 }
             }
@@ -282,14 +283,13 @@ namespace KursovaiJEY
                     guna2DataGridView4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
-                    guna2Button8.Visible = true;
+                    guna2Button8.Visible = false;
                     guna2Button9.Visible = true;
                     guna2Button16.Visible = true;
                 }
 
                 else
                 {
-                    guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
                     guna2Button16.Visible = true;
                 }
@@ -430,7 +430,7 @@ namespace KursovaiJEY
             DBconnect connection = new DBconnect();
             connection.openConnection();
 
-            MySqlCommand command = new MySqlCommand("INSERT INTO `Claim` (`idAC`, `FIO`, `Telephone`, `AddressIncidents`, `DoI`, `DataReport`) VALUES (@I, @F, @T, @A, @D, @DR)", connection.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `Claim` (`idAC`, `FIO`, `Telephone`, `AddressIncidents`, `DoI`, `DataReport`, `RS`) VALUES (@I, @F, @T, @A, @D, @DR, @uRS)", connection.GetConnection());
             string IDK = SaveData.IDC.ToString();
             //string DATA = DateTime.Now.ToString();
             command.Parameters.Add("@I", MySqlDbType.VarChar).Value = IDK;
@@ -439,6 +439,7 @@ namespace KursovaiJEY
             command.Parameters.Add("@A", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
             command.Parameters.Add("@D", MySqlDbType.VarChar).Value = guna2TextBox2.Text;
             command.Parameters.Add("@DR", MySqlDbType.VarChar).Value = DateTime.Now;
+            command.Parameters.Add("@uRS", MySqlDbType.VarChar).Value = "Незавершён";
             if (command.ExecuteNonQuery() == 1)
             {
                 listBox3.Items.Clear();
@@ -460,27 +461,58 @@ namespace KursovaiJEY
             DBconnect connection = new DBconnect();
             connection.openConnection();
 
-            MySqlCommand command0 = new MySqlCommand("SELECT *, Claim.IDR, Claim.idAC, Claim.FIO, Claim.Telephone, Claim.AddressIncidents, Claim.DoI, Claim.DataReport FROM Claim", connection.GetConnection());
+            MySqlCommand command0 = new MySqlCommand("SELECT *, Claim.IDR, Claim.idAC, Claim.FIO, Claim.Telephone, Claim.AddressIncidents, Claim.DoI, Claim.DataReport, Claim.RS FROM Claim", connection.GetConnection());
             MySqlDataReader reader0 = command0.ExecuteReader();
             List<string[]> data = new List<string[]>();
             while (reader0.Read())
             {
-                data.Add(new string[7]);
+                data.Add(new string[8]);
 
                 data[data.Count - 1][0] = reader0[0].ToString();
                 data[data.Count - 1][1] = reader0[1].ToString();
+                viemlvl = Convert.ToInt32(reader0[1]);
                 data[data.Count - 1][2] = reader0[2].ToString();
                 data[data.Count - 1][3] = reader0[3].ToString();
                 data[data.Count - 1][4] = reader0[4].ToString();
                 data[data.Count - 1][5] = reader0[5].ToString();
                 data[data.Count - 1][6] = reader0[6].ToString();
+                data[data.Count - 1][7] = reader0[7].ToString();
             }
             reader0.Close();
             connection.closeConnection();
-            foreach (string[] s in data)
-                guna2DataGridView2.Rows.Add(s);
-            int rows = guna2DataGridView2.Rows.Count;
-            toolStripLabel2.Text = Convert.ToString(rows);
+            if (SaveData.LVLC == 1)
+            {
+                if (viemlvl == SaveData.IDC)
+                {
+                    foreach (string[] s in data)
+                        guna2DataGridView2.Rows.Add(s);
+                    int rows = guna2DataGridView2.Rows.Count;
+                    toolStripLabel2.Text = Convert.ToString(rows);
+
+                    for (int i = 0; i < guna2DataGridView2.RowCount - 1; i++)
+                    { // если в таблице больше одной записи (первая - это наименования столбцов)
+                        if (guna2DataGridView2.RowCount > 1)
+                        {
+
+                            int QuanityValue = Convert.ToInt32(guna2DataGridView2.Rows[i].Cells[1].Value);
+                            if (QuanityValue != viemlvl)
+                            {
+                                guna2DataGridView2.Rows.RemoveAt(i);
+                                i--;
+                            }
+                        }
+                    }
+
+                }
+            }
+            if (SaveData.LVLe > 1)
+            {
+                foreach (string[] s in data)
+                    guna2DataGridView2.Rows.Add(s);
+                int rows = guna2DataGridView2.Rows.Count;
+                toolStripLabel2.Text = Convert.ToString(rows);
+            }
+
         }
         private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -551,7 +583,6 @@ namespace KursovaiJEY
                 toolStrip2.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
-                guna2Button8.Visible = true;
                 guna2Button9.Visible = true;
                 toolStrip4.Visible = false;
                 guna2DataGridView4.Visible = false;
@@ -566,7 +597,6 @@ namespace KursovaiJEY
                 guna2DataGridView2.Visible = true;
                 toolStrip1.Visible = true;
                 listBox4.Visible = true;
-                guna2Button8.Visible = true;
                 guna2Button9.Visible = true;
 
             }
@@ -603,6 +633,7 @@ namespace KursovaiJEY
         {
             guna2DataGridView2.Rows.Clear();
             ClaimTable();
+            toolStripComboBox1.SelectedIndex = -1;
             listBox4.Items.Clear();
             listBox4.Items.Add("Данные обновлены");
         }
@@ -878,15 +909,15 @@ namespace KursovaiJEY
             }
             if (guna2TextBox3.Text == "")
             {
-               guna2TextBox3.PlaceholderText = "Введите адресс";
-               guna2TextBox3.PlaceholderForeColor = Color.Red;
-               return;
+                guna2TextBox3.PlaceholderText = "Введите адресс";
+                guna2TextBox3.PlaceholderForeColor = Color.Red;
+                return;
             }
             if (guna2ComboBox1.Text == "")
             {
-               listBox4.Items.Clear();
-               listBox4.Items.Add("Выберите день рождения");
-               return;
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Выберите день рождения");
+                return;
             }
             else
             {
@@ -933,66 +964,66 @@ namespace KursovaiJEY
             }
             if (guna2ComboBox2.Text == "")
             {
-               listBox4.Items.Clear();
-               listBox4.Items.Add("Выберите месяц рождения");
-               return;
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Выберите месяц рождения");
+                return;
             }
             else
             {
-                   if(guna2ComboBox2.Text == "Январь") 
-                    {
+                if (guna2ComboBox2.Text == "Январь")
+                {
                     SaveData.month = "01";
-                    }
-                   if (guna2ComboBox2.Text == "Февраль")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Февраль")
+                {
                     SaveData.month = "02";
-                   }
-                   if (guna2ComboBox2.Text == "Март")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Март")
+                {
                     SaveData.month = "03";
-                   }
-                   if (guna2ComboBox2.Text == "Апрель")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Апрель")
+                {
                     SaveData.month = "04";
-                   }
-                   if (guna2ComboBox2.Text == "Май")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Май")
+                {
                     SaveData.month = "05";
-                   }
-                   if (guna2ComboBox2.Text == "Июнь")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Июнь")
+                {
                     SaveData.month = "06";
-                   }
-                   if (guna2ComboBox2.Text == "Июль")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Июль")
+                {
                     SaveData.month = "07";
-                   }
-                   if (guna2ComboBox2.Text == "Август")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Август")
+                {
                     SaveData.month = "08";
-                   }
-                   if (guna2ComboBox2.Text == "Сентябрь")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Сентябрь")
+                {
                     SaveData.month = "09";
-                   }
-                   if (guna2ComboBox2.Text == "Октябрь")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Октябрь")
+                {
                     SaveData.month = "10";
-                   }
-                   if (guna2ComboBox2.Text == "Ноябрь")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Ноябрь")
+                {
                     SaveData.month = "11";
-                   }
-                   if (guna2ComboBox2.Text == "Декабрь")
-                   {
+                }
+                if (guna2ComboBox2.Text == "Декабрь")
+                {
                     SaveData.month = "12";
-                   }
+                }
             }
             if (guna2ComboBox3.Text == "")
             {
-               listBox4.Items.Clear();
-               listBox4.Items.Add("Выберите год рождения");
-               return;
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Выберите год рождения");
+                return;
             }
             if (guna2TextBox12.Text == "")
             {
@@ -1001,112 +1032,112 @@ namespace KursovaiJEY
                 return;
             }
             if (guna2TextBox12.TextLength < 12)
+            {
+                if (listBox4.Items.Contains("Длина ИНН меньше допустимой. Минимальная длина 12 символов.") == false)
                 {
-                    if (listBox4.Items.Contains("Длина ИНН меньше допустимой. Минимальная длина 12 символов.") == false)
-                    {
-                        listBox4.Items.Clear();
-                        listBox4.Items.Add("Длина ИНН меньше 12 символов.");
-                        return;
-                    }
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Длина ИНН меньше 12 символов.");
+                    return;
+                }
             }
-                if (guna2TextBox6.Text == "")
+            if (guna2TextBox6.Text == "")
+            {
+                guna2TextBox6.PlaceholderText = "Введите логин сотрудника";
+                guna2TextBox6.PlaceholderForeColor = Color.Red;
+                return;
+            }
+
+            if (guna2TextBox9.Text == "")
+            {
+                guna2TextBox9.PlaceholderText = "Введите пароль";
+                guna2TextBox9.PlaceholderForeColor = Color.Red;
+                return;
+            }
+            else if (guna2TextBox8.Text == "")
+            {
+                guna2TextBox8.PlaceholderText = "Введите повторный пароль";
+                guna2TextBox8.PlaceholderForeColor = Color.Red;
+                return;
+            }
+
+            if (checkUser1())
+                return;
+
+            DBconnect connection = new DBconnect();
+            connection.openConnection();
+
+            MySqlCommand command = new MySqlCommand("INSERT INTO `ALP` (`login`, `pass`, `lvl`) VALUES (@uL, @uP, @uLV)", connection.GetConnection());
+
+
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = guna2TextBox6.Text;
+            command.Parameters.Add("@uLV", MySqlDbType.VarChar).Value = 2;
+            if (guna2TextBox9.Text == guna2TextBox6.Text)
+            {
+                if (listBox4.Items.Contains("Пароль и логин не могут быть одинаковыми") == false)
                 {
-                    guna2TextBox6.PlaceholderText = "Введите логин сотрудника";
-                    guna2TextBox6.PlaceholderForeColor = Color.Red;
-                    return;
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Пароль и логин не могут быть одинаковыми");
                 }
+                return;
 
-                if (guna2TextBox9.Text == "")
+            }
+            else if (guna2TextBox9.Text == guna2TextBox8.Text)
+            {
+                command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = guna2TextBox9.Text;
+            }
+            else
+            {
+                if (listBox4.Items.Contains("Ведённые пароли не совпадают") == false)
                 {
-                    guna2TextBox9.PlaceholderText = "Введите пароль";
-                    guna2TextBox9.PlaceholderForeColor = Color.Red;
-                    return;
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Ведённые пароли не совпадают");
                 }
-                else if (guna2TextBox8.Text == "")
+                return;
+            }
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MySqlCommand command3 = new MySqlCommand("SELECT MAX(`idAC`) FROM `ALP`", connection.GetConnection());
+                string test = command3.ExecuteScalar().ToString();
+
+                MySqlCommand command2 = new MySqlCommand("INSERT INTO Employee (idAC, FIO, Telephone, Address, DoB, INN) VALUES (@1, @2, @3, @4, @5, @6)", connection.GetConnection());
+                command2.Parameters.Add("@1", MySqlDbType.VarChar).Value = test;
+
+                if (guna2TextBox10.Text == "" ^ guna2TextBox10.Text.Any(char.IsDigit))
                 {
-                    guna2TextBox8.PlaceholderText = "Введите повторный пароль";
-                    guna2TextBox8.PlaceholderForeColor = Color.Red;
+                    MessageBox.Show("Ваше имя не должно содержать цифр или любых других знаков!");
                     return;
-                }
-
-                if (checkUser1())
-                    return;
-
-                DBconnect connection = new DBconnect();
-                connection.openConnection();
-
-                MySqlCommand command = new MySqlCommand("INSERT INTO `ALP` (`login`, `pass`, `lvl`) VALUES (@uL, @uP, @uLV)", connection.GetConnection());
-
-
-                command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = guna2TextBox6.Text;
-                command.Parameters.Add("@uLV", MySqlDbType.VarChar).Value = 2;
-                if (guna2TextBox9.Text == guna2TextBox6.Text)
-                {
-                    if (listBox4.Items.Contains("Пароль и логин не могут быть одинаковыми") == false)
-                    {
-                        listBox4.Items.Clear();
-                        listBox4.Items.Add("Пароль и логин не могут быть одинаковыми");
-                    }
-                    return;
-
-                }
-                else if (guna2TextBox9.Text == guna2TextBox8.Text)
-                {
-                    command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = guna2TextBox9.Text;
                 }
                 else
                 {
-                    if (listBox4.Items.Contains("Ведённые пароли не совпадают") == false)
-                    {
-                        listBox4.Items.Clear();
-                        listBox4.Items.Add("Ведённые пароли не совпадают");
-                    }
-                    return;
+                    command2.Parameters.Add("@2", MySqlDbType.VarChar).Value = guna2TextBox10.Text;
                 }
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    MySqlCommand command3 = new MySqlCommand("SELECT MAX(`idAC`) FROM `ALP`", connection.GetConnection());
-                    string test = command3.ExecuteScalar().ToString();
 
-                    MySqlCommand command2 = new MySqlCommand("INSERT INTO Employee (idAC, FIO, Telephone, Address, DoB, INN) VALUES (@1, @2, @3, @4, @5, @6)", connection.GetConnection());
-                    command2.Parameters.Add("@1", MySqlDbType.VarChar).Value = test;
+                command2.Parameters.Add("@3", MySqlDbType.VarChar).Value = guna2TextBox7.Text;
+                command2.Parameters.Add("@4", MySqlDbType.VarChar).Value = guna2TextBox3.Text;
+                string year = guna2ComboBox3.Text;
+                year = year.Substring(2);
+                string data1 = $"{SaveData.day}.{SaveData.month}.{year}";
+                command2.Parameters.Add("@5", MySqlDbType.VarChar).Value = data1;
 
-                    if (guna2TextBox10.Text == "" ^ guna2TextBox10.Text.Any(char.IsDigit))
-                    {
-                        MessageBox.Show("Ваше имя не должно содержать цифр или любых других знаков!");
-                        return;
-                    }
-                    else
-                    {
-                        command2.Parameters.Add("@2", MySqlDbType.VarChar).Value = guna2TextBox10.Text;
-                    }
-
-                    command2.Parameters.Add("@3", MySqlDbType.VarChar).Value = guna2TextBox7.Text;
-                    command2.Parameters.Add("@4", MySqlDbType.VarChar).Value = guna2TextBox3.Text;
-                    string year = guna2ComboBox3.Text;
-                    year = year.Substring(2);
-                    string data1 = $"{SaveData.day}.{SaveData.month}.{year}";
-                    command2.Parameters.Add("@5", MySqlDbType.VarChar).Value = data1;
-
-                    command2.Parameters.Add("@6", MySqlDbType.VarChar).Value = guna2TextBox12.Text;
-                    command2.ExecuteNonQuery();
-                     listBox4.Items.Clear();
-                     listBox4.Items.Add("Аккаунт сотрудника создан");
-                     guna2TextBox10.Text = "";
-                     guna2TextBox7.Text = "";
-                     guna2TextBox3.Text = "";
-                     guna2TextBox12.Text = "";
-                     guna2TextBox6.Text = "";
-                     guna2TextBox9.Text = "";
-                     guna2TextBox8.Text = "";
-                }
-                else
-                {
+                command2.Parameters.Add("@6", MySqlDbType.VarChar).Value = guna2TextBox12.Text;
+                command2.ExecuteNonQuery();
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Аккаунт сотрудника создан");
+                guna2TextBox10.Text = "";
+                guna2TextBox7.Text = "";
+                guna2TextBox3.Text = "";
+                guna2TextBox12.Text = "";
+                guna2TextBox6.Text = "";
+                guna2TextBox9.Text = "";
+                guna2TextBox8.Text = "";
+            }
+            else
+            {
                 listBox4.Items.Clear();
                 listBox4.Items.Add("Произошла ошибка сервера");
                 return;
-                }
-                connection.closeConnection();
+            }
+            connection.closeConnection();
 
             guna2TextBox10.PlaceholderText = "ФИО";
             guna2TextBox7.PlaceholderText = "Номер телефона";
@@ -1142,7 +1173,7 @@ namespace KursovaiJEY
             else //аккаунт создан
             {
                 return false;
-            } 
+            }
         }
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
@@ -1318,54 +1349,76 @@ namespace KursovaiJEY
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
-            guna2TextBox20.Text = "";
-            guna2TextBox17.Text = "";
-            guna2TextBox15.Text = "";
-            guna2TextBox16.Text = "";
-            guna2TextBox14.Text = "";
-            listBox5.Items.Clear();
-            listBox4.Items.Clear();
-            if (SaveData.ID_Claim != null)
+            DBconnect connection = new DBconnect(); //Подключение к базе данных с помощью файла Program.CS
+            connection.openConnection();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
+            MySqlCommand command111 = new MySqlCommand("SELECT * FROM `Comment` WHERE `IDR` = @Ur", connection.GetConnection()); //Создание команды на выборку
+            command111.Parameters.Add("@Ur", MySqlDbType.VarChar).Value = SaveData.ID_Claim; //Заменяем шифр из команды на переменные
+            adapter.SelectCommand = command111; // адаптер выберает команду "КОММАНД"
+            MySqlDataReader reader112 = command111.ExecuteReader();
+            List<string[]> data1 = new List<string[]>();
+            while (reader112.Read())
             {
-                if (guna2DataGridView2.Visible == true && toolStrip1.Visible == true)
-                {
-                    guna2Button8.Visible = false;
-                    guna2Button9.Visible = false;
-                    guna2Button16.Visible = false;
-                    guna2DataGridView2.Visible = false;
-                    toolStrip1.Visible = false;
-                    listBox4.Visible = true;
-                    guna2Panel6.Visible = true;
-                }
-                else
-                {
-                    guna2Panel6.Visible = true;
-                    listBox4.Visible = true;
-                }
-                DBconnect connection = new DBconnect(); //Подключение к базе данных с помощью файла Program.CS
-                connection.openConnection();
-                MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
-                MySqlCommand command11 = new MySqlCommand("SELECT * FROM `Claim` WHERE `IDR` = @Ur", connection.GetConnection()); //Создание команды на выборку
-                command11.Parameters.Add("@Ur", MySqlDbType.VarChar).Value = SaveData.ID_Claim; //Заменяем шифр из команды на переменные
-                adapter.SelectCommand = command11; // адаптер выберает команду "КОММАНД"
-                MySqlDataReader reader11 = command11.ExecuteReader();
-                List<string[]> data = new List<string[]>();
-                while (reader11.Read())
-                {
-                   guna2TextBox20.Text = reader11[2].ToString();
-                   guna2TextBox17.Text = reader11[3].ToString();
-                   guna2TextBox16.Text = reader11[4].ToString();
-                   string text = reader11[5].ToString();
-                   listBox5.Items.Add($"{text}");
-                   guna2TextBox15.Text = reader11[6].ToString();
-                }
-                reader11.Close();
-                connection.closeConnection();
+                SaveData.testIDR = reader112[1].ToString();
+            }
+            reader112.Close();
+            if (toolStripLabel3.Text == SaveData.testIDR)
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("На данную заявку уже есть ответ");
+                return;
             }
             else
             {
+
+                guna2TextBox20.Text = "";
+                guna2TextBox17.Text = "";
+                guna2TextBox15.Text = "";
+                guna2TextBox16.Text = "";
+                guna2TextBox14.Text = "";
+                listBox5.Items.Clear();
                 listBox4.Items.Clear();
-                listBox4.Items.Add("Вы не выбрали заявку, к которой хотите оставить комментарий");
+                if (SaveData.ID_Claim != null)
+                {
+                    if (guna2DataGridView2.Visible == true && toolStrip1.Visible == true)
+                    {
+                        guna2Button8.Visible = false;
+                        guna2Button9.Visible = false;
+                        guna2Button16.Visible = false;
+                        guna2DataGridView2.Visible = false;
+                        toolStrip1.Visible = false;
+                        listBox4.Visible = true;
+                        guna2Panel6.Visible = true;
+                    }
+                    else
+                    {
+                        guna2Panel6.Visible = true;
+                        listBox4.Visible = true;
+                    }
+                    MySqlCommand command222 = new MySqlCommand("SELECT * FROM `Claim` WHERE `IDR` = @Ur", connection.GetConnection()); //Создание команды на выборку
+                    command222.Parameters.Add("@Ur", MySqlDbType.VarChar).Value = SaveData.ID_Claim; //Заменяем шифр из команды на переменные
+                    adapter.SelectCommand = command222; // адаптер выберает команду "КОММАНД"
+                    MySqlDataReader reader11 = command222.ExecuteReader();
+                    List<string[]> data2 = new List<string[]>();
+                    while (reader11.Read())
+                    {
+                        SaveData.test = reader11[1].ToString();
+                        guna2TextBox20.Text = reader11[2].ToString();
+                        guna2TextBox17.Text = reader11[3].ToString();
+                        guna2TextBox16.Text = reader11[4].ToString();
+                        string text = reader11[5].ToString();
+                        listBox5.Items.Add($"{text}");
+                        guna2TextBox15.Text = reader11[6].ToString();
+                    }
+                    reader11.Close();
+                    connection.closeConnection();
+
+                }
+                else
+                {
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы не выбрали заявку, к которой хотите оставить комментарий");
+                }
             }
 
         }
@@ -1382,7 +1435,7 @@ namespace KursovaiJEY
                 e.ItemHeight = (int)e.Graphics.MeasureString(listBox5.Items[e.Index].ToString(), listBox5.Font, listBox5.Width).Height;
                 return;
             }
-           
+
         }
 
         private void guna2DataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1421,7 +1474,7 @@ namespace KursovaiJEY
             List<string[]> data = new List<string[]>();
             while (reader55.Read())
             {
-                data.Add(new string[6]);
+                data.Add(new string[7]);
 
                 data[data.Count - 1][0] = reader55[0].ToString();
                 data[data.Count - 1][1] = reader55[1].ToString();
@@ -1429,13 +1482,41 @@ namespace KursovaiJEY
                 data[data.Count - 1][3] = reader55[3].ToString();
                 data[data.Count - 1][4] = reader55[4].ToString();
                 data[data.Count - 1][5] = reader55[5].ToString();
+                data[data.Count - 1][6] = reader55[6].ToString();
             }
             reader55.Close();
             connection.closeConnection();
-            foreach (string[] s in data)
-                guna2DataGridView4.Rows.Add(s);
-            int rows = guna2DataGridView4.Rows.Count;
-            toolStripLabel16.Text = Convert.ToString(rows);
+            if (SaveData.LVLC == 1)
+            {
+                if (viemlvl == SaveData.IDC)
+                {
+                    foreach (string[] s in data)
+                        guna2DataGridView4.Rows.Add(s);
+                    int rows = guna2DataGridView4.Rows.Count;
+                    toolStripLabel2.Text = Convert.ToString(rows);
+
+                    for (int i = 0; i < guna2DataGridView4.RowCount - 1; i++)
+                    { // если в таблице больше одной записи (первая - это наименования столбцов)
+                        if (guna2DataGridView4.RowCount > 1)
+                        {
+                            int QuanityValue = Convert.ToInt32(guna2DataGridView4.Rows[i].Cells[2].Value);
+                            if (QuanityValue != viemlvl)
+                            {
+                                guna2DataGridView4.Rows.RemoveAt(i);
+                                i--;
+                            }
+                        }
+                    }
+
+                }
+            }
+            if (SaveData.LVLe > 1)
+            {
+                foreach (string[] s in data)
+                    guna2DataGridView4.Rows.Add(s);
+                int rows = guna2DataGridView4.Rows.Count;
+                toolStripLabel2.Text = Convert.ToString(rows);
+            }
         }
 
         private void guna2Button11_Click(object sender, EventArgs e)
@@ -1449,19 +1530,22 @@ namespace KursovaiJEY
             DBconnect connection = new DBconnect();
             connection.openConnection();
 
-            MySqlCommand command222 = new MySqlCommand("INSERT INTO `Comment` (`IDR`, `IDE`, `FIO`, `DataAnswer`, `CommentEmp`) VALUES (@1, @2, @3, @4, @5)", connection.GetConnection());
+            MySqlCommand command222 = new MySqlCommand("INSERT INTO `Comment` (`IDR`, `idAC`, `IDE`, `FIO`, `DataAnswer`, `CommentEmp`) VALUES (@1, @2, @3, @4, @5, @6)", connection.GetConnection());
 
             string index;
             index = toolStripLabel3.Text;
             command222.Parameters.Add("@1", MySqlDbType.VarChar).Value = index;
-            command222.Parameters.Add("@2", MySqlDbType.VarChar).Value = SaveData.IDe;
-            command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.FIOe;
-            command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = DateTime.Now;
-            command222.Parameters.Add("@5", MySqlDbType.VarChar).Value = guna2TextBox14.Text;
+            command222.Parameters.Add("@2", MySqlDbType.VarChar).Value = SaveData.test;
+            command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.IDe;
+            command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = SaveData.FIOe;
+            command222.Parameters.Add("@5", MySqlDbType.VarChar).Value = DateTime.Now;
+            command222.Parameters.Add("@6", MySqlDbType.VarChar).Value = guna2TextBox14.Text;
             command222.ExecuteNonQuery();
             listBox4.Items.Clear();
             listBox4.Items.Add("Вы оставили свой комментарий к данному обращению");
             guna2TextBox14.Text = "";
+            MySqlCommand command333 = new MySqlCommand($"UPDATE Claim SET RS = 'Завершен' WHERE IDR = {index};", connection.GetConnection());
+            command333.ExecuteNonQuery();
             connection.closeConnection();
         }
 
@@ -1472,6 +1556,17 @@ namespace KursovaiJEY
                 guna2Panel6.Visible = false;
                 guna2DataGridView2.Visible = true;
                 toolStrip1.Visible = true;
+                if (SaveData.LVLe == 2)
+                {
+                    guna2Button9.Visible = true;
+                    guna2Button16.Visible = true;
+                }
+                if (SaveData.LVLe == 3)
+                {
+                    guna2Button8.Visible = true;
+                    guna2Button9.Visible = true;
+                    guna2Button16.Visible = true;
+                }
             }
             else
             {
@@ -1488,5 +1583,45 @@ namespace KursovaiJEY
             ClaimTable();
         }
 
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            guna2DataGridView2.Rows.Clear();
+            ClaimTable();
+
+            if (toolStripComboBox1.Text == "Завершённые ")
+            {
+
+                for (int i = 0; i < guna2DataGridView2.RowCount; i++)
+                { // если в таблице больше одной записи (первая - это наименования столбцов)
+                    if (guna2DataGridView2.RowCount >= 1)
+                    {
+
+                        string QuanityValue = guna2DataGridView2.Rows[i].Cells[7].Value.ToString();
+                        if (QuanityValue != "Завершен")
+                        {
+                            guna2DataGridView2.Rows.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
+            }
+            else if (toolStripComboBox1.Text == "Незавершённые ")
+            {
+
+                for (int i = 0; i < guna2DataGridView2.RowCount; i++)
+                { // если в таблице больше одной записи (первая - это наименования столбцов)
+                    if (guna2DataGridView2.RowCount >= 1)
+                    {
+
+                        string QuanityValue = guna2DataGridView2.Rows[i].Cells[7].Value.ToString();
+                        if (QuanityValue != "Незавершён")
+                        {
+                            guna2DataGridView2.Rows.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -152,7 +152,7 @@ namespace KursovaiJEY
             this.guna2TextBox6.Location = new System.Drawing.Point(37, 189);
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox6.PlaceholderText = "Логин";
             this.guna2TextBox6.SelectedText = "";
             this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
@@ -185,7 +185,7 @@ namespace KursovaiJEY
             this.guna2TextBox5.Location = new System.Drawing.Point(37, 147);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox5.PlaceholderText = "Адрес проживания";
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
@@ -218,7 +218,7 @@ namespace KursovaiJEY
             this.guna2TextBox4.MaxLength = 11;
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox4.PlaceholderText = "Номер телефона";
             this.guna2TextBox4.SelectedText = "";
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
@@ -251,7 +251,7 @@ namespace KursovaiJEY
             this.guna2TextBox3.Location = new System.Drawing.Point(37, 273);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox3.PlaceholderText = "Повторите пароль";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
@@ -334,7 +334,7 @@ namespace KursovaiJEY
             this.guna2TextBox2.Location = new System.Drawing.Point(37, 231);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox2.PlaceholderText = "Пароль";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
@@ -368,7 +368,7 @@ namespace KursovaiJEY
             this.guna2TextBox1.Location = new System.Drawing.Point(37, 63);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.guna2TextBox1.PlaceholderText = "ФИО";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;

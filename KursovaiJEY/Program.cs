@@ -57,6 +57,8 @@ namespace KursovaiJEY
         public static string TELEPHONEC;
         public static string ADDRESSC;
         public static int LVLC;
+        public static string test;
+        public static string testIDR;
 
         public static int IDe;
         public static string LOGINe;
