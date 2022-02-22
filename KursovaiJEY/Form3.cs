@@ -16,6 +16,7 @@ namespace KursovaiJEY
         string id_selected_rows = "0";
         string id_selected_rows2 = "0";
         string id_selected_rows3 = "0";
+        string id_selected_rows4 = "0";
         public Form3()
         {
             InitializeComponent();
@@ -23,28 +24,36 @@ namespace KursovaiJEY
             ClaimTable();
             ClaimTable2();
             ClaimTable3();
+            ClaimTable4();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
 
-            label1.Text = SaveData.LOGINC;
-            string lvl = SaveData.LVLC.ToString();
+            
+            string lvl = SaveData.LVLe.ToString();
             label3.Text = lvl;
             if (SaveData.LVLC == 1)
             {
+                toolStripButton2.Visible = false;
+                toolStripButton8.Visible = false;
+                toolStripButton4.Visible = false;
                 guna2Button12.Visible = false;
                 guna2Button13.Visible = false;
+                label1.Text = SaveData.LOGINC;
             }
-            if (SaveData.LVLC == 2)
+            if (SaveData.LVLe == 2)
             {
+                toolStripButton2.Visible = false;
                 guna2Button12.Visible = false;
                 guna2Button13.Visible = false;
+                label1.Text = SaveData.LOGINe;
             }
-            if (SaveData.LVLC == 3)
+            if (SaveData.LVLe == 3)
             {
                 guna2Button12.Visible = true;
                 guna2Button13.Visible = true;
+                label1.Text = SaveData.LOGINe;
             }
             guna2TextBox8.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2TextBox9.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
@@ -87,11 +96,15 @@ namespace KursovaiJEY
                 guna2Button9.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
+                guna2Panel5.Visible = false;
                 listBox1.Visible = false;
                 listBox4.Visible = false;
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
+                toolStrip4.Visible = false;
+                guna2Panel6.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 guna2Button16.Visible = false;
@@ -121,9 +134,13 @@ namespace KursovaiJEY
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
                 listBox4.Visible = false;
+                toolStrip4.Visible = false;
+                guna2Panel5.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 guna2Button16.Visible = false;
+                guna2Panel6.Visible = false;
                 listBox4.Visible = false;
                 listBox1.Visible = true;
 
@@ -147,9 +164,13 @@ namespace KursovaiJEY
                 guna2Button9.Visible = false;
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
+                guna2Panel5.Visible = false;
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
+                toolStrip4.Visible = false;
+                guna2Panel6.Visible = false;
+                guna2DataGridView4.Visible = false;
                 listBox4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
@@ -183,8 +204,11 @@ namespace KursovaiJEY
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 listBox4.Visible = false;
+                guna2Panel5.Visible = false;
+                guna2Panel6.Visible = false;
                 guna2Button16.Visible = false;
-                listBox4.Visible = false;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 toolStrip2.Visible = false;
@@ -212,11 +236,15 @@ namespace KursovaiJEY
                     guna2Button7.Visible = false;
                     guna2DataGridView1.Visible = false;
                     guna2Panel4.Visible = false;
+                    guna2Panel6.Visible = false;
+                    guna2Panel5.Visible = false;
                     guna2DataGridView2.Visible = false;
                     toolStrip1.Visible = false;
                     listBox4.Visible = false;
                     listBox4.Visible = false;
                     toolStrip2.Visible = false;
+                    toolStrip4.Visible = false;
+                    guna2DataGridView4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
                     guna2Button8.Visible = true;
@@ -231,7 +259,7 @@ namespace KursovaiJEY
                     guna2Button9.Visible = true;
                 }
             }
-            if (SaveData.LVLC == 2)//сотрудник
+            if (SaveData.LVLe == 2)//сотрудник
             {
                 if (guna2Button8.Visible == false && guna2Button9.Visible == false)
                 {
@@ -243,24 +271,30 @@ namespace KursovaiJEY
                     guna2DataGridView1.Visible = false;
                     guna2Panel4.Visible = false;
                     guna2Button8.Visible = false;
+                    guna2Panel5.Visible = false;
+                    guna2Panel6.Visible = false;
                     guna2DataGridView2.Visible = false;
                     toolStrip1.Visible = false;
                     listBox4.Visible = false;
                     toolStrip2.Visible = false;
                     listBox4.Visible = false;
+                    toolStrip4.Visible = false;
+                    guna2DataGridView4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
+                    guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
                     guna2Button16.Visible = true;
                 }
 
                 else
                 {
+                    guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
                     guna2Button16.Visible = true;
                 }
             }
-            if (SaveData.LVLC == 3) //админ
+            if (SaveData.LVLe == 3) //админ
             {
                 if (guna2Button8.Visible == false && guna2Button9.Visible == false)
                 {
@@ -272,7 +306,10 @@ namespace KursovaiJEY
                     guna2Panel4.Visible = false;
                     toolStrip1.Visible = false;
                     listBox4.Visible = false;
-                    listBox4.Visible = false;
+                    guna2Panel5.Visible = false;
+                    guna2Panel6.Visible = false;
+                    toolStrip4.Visible = false;
+                    guna2DataGridView4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
                     guna2DataGridView1.Visible = false;
@@ -309,6 +346,8 @@ namespace KursovaiJEY
                 listBox4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2Button16.Visible = true;
                 guna2Button8.Visible = true;
                 guna2Panel4.Visible = true;
@@ -331,22 +370,25 @@ namespace KursovaiJEY
                 listBox2.Visible = false;
                 guna2Button7.Visible = false;
                 guna2Panel4.Visible = false;
-                guna2Button9.Visible = true;
                 guna2DataGridView1.Visible = false;
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
-                guna2Button16.Visible = true;
-                guna2DataGridView1.Visible = false;
-                listBox4.Visible = false;
+                toolStrip4.Visible = true;
+                guna2DataGridView4.Visible = true;
+                listBox4.Visible = true;
             }
 
             else
             {
-                guna2DataGridView3.Visible = true;
+                toolStrip4.Visible = true;
+                guna2DataGridView4.Visible = true;
+                listBox4.Visible = true;
             }
+            guna2DataGridView4.Rows.Clear();
+            ClaimTable4();
         }
 
         private void guna2Button15_Click(object sender, EventArgs e)
@@ -396,7 +438,7 @@ namespace KursovaiJEY
             command.Parameters.Add("@T", MySqlDbType.VarChar).Value = guna2TextBox4.Text;
             command.Parameters.Add("@A", MySqlDbType.VarChar).Value = guna2TextBox5.Text;
             command.Parameters.Add("@D", MySqlDbType.VarChar).Value = guna2TextBox2.Text;
-            command.Parameters.Add("@DR", MySqlDbType.Date).Value = DateTime.Now;
+            command.Parameters.Add("@DR", MySqlDbType.VarChar).Value = DateTime.Now;
             if (command.ExecuteNonQuery() == 1)
             {
                 listBox3.Items.Clear();
@@ -496,6 +538,7 @@ namespace KursovaiJEY
         }
         private void guna2Button16_Click(object sender, EventArgs e)
         {
+
             if (guna2DataGridView2.Visible == false && toolStrip1.Visible == false)
             {
                 listBox1.Visible = false;
@@ -510,6 +553,8 @@ namespace KursovaiJEY
                 toolStrip3.Visible = false;
                 guna2Button8.Visible = true;
                 guna2Button9.Visible = true;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView2.Visible = true;
                 guna2DataGridView3.Visible = false;
                 toolStrip1.Visible = true;
@@ -525,7 +570,8 @@ namespace KursovaiJEY
                 guna2Button9.Visible = true;
 
             }
-
+            guna2DataGridView2.Rows.Clear();
+            ClaimTable();
         }
         //////////////////////////////////////////////////// ДатаГрид отвечающий за список всех заявок
         public void guna2DataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -629,11 +675,15 @@ namespace KursovaiJEY
                 guna2DataGridView2.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip1.Visible = false;
+                guna2Panel5.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
+                guna2Panel6.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
                 guna2Button16.Visible = false;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView1.Visible = true;
                 toolStrip2.Visible = true;
                 listBox4.Visible = true;
@@ -662,7 +712,7 @@ namespace KursovaiJEY
             connection.openConnection();
             MySqlCommand command88_1 = new MySqlCommand("DELETE FROM Client WHERE idAC = @uAD", connection.GetConnection());
             MySqlCommand command88_2 = new MySqlCommand("DELETE FROM ALP WHERE idAC = @uAD", connection.GetConnection());
-            int idc = Convert.ToInt32(SaveData.ID_idAC);
+            int idc = Convert.ToInt32(SaveData.IDC);
             if (SaveData.IDC != idc)
             {
                 if (SaveData.ID_idAC != null)
@@ -690,6 +740,9 @@ namespace KursovaiJEY
             connection.closeConnection();
         }
 
+
+
+
         private void guna2DataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex > 0)
@@ -713,10 +766,14 @@ namespace KursovaiJEY
                 guna2Panel4.Visible = false;
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
+                guna2Panel5.Visible = false;
                 toolStrip2.Visible = false;
+                guna2Panel6.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
                 guna2Button16.Visible = false;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
                 guna2DataGridView3.Visible = true;
                 toolStrip3.Visible = true;
                 listBox4.Visible = true;
@@ -732,6 +789,23 @@ namespace KursovaiJEY
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
+            guna2TextBox10.Text = "";
+            guna2TextBox7.Text = "";
+            guna2TextBox3.Text = "";
+            guna2TextBox12.Text = "";
+            guna2TextBox6.Text = "";
+            guna2TextBox9.Text = "";
+            guna2TextBox8.Text = "";
+            guna2TextBox10.PlaceholderText = "ФИО";
+            guna2TextBox7.PlaceholderText = "Номер телефона";
+            guna2TextBox3.PlaceholderText = "Адресс проживания";
+            guna2TextBox12.PlaceholderText = "ИНН";
+            guna2TextBox6.PlaceholderText = "Логин";
+            guna2TextBox9.PlaceholderText = "Пароль";
+            guna2TextBox8.PlaceholderText = "Повторите пароль";
+            guna2ComboBox1.SelectedIndex = -1;
+            guna2ComboBox2.SelectedIndex = -1;
+            guna2ComboBox3.SelectedIndex = -1;
             if (guna2DataGridView3.Visible == true && toolStrip3.Visible == true)
             {
                 guna2DataGridView3.Visible = false;
@@ -758,6 +832,23 @@ namespace KursovaiJEY
             {
                 guna2Panel5.Visible = true;
             }
+            guna2TextBox10.Text = "";
+            guna2TextBox7.Text = "";
+            guna2TextBox3.Text = "";
+            guna2TextBox12.Text = "";
+            guna2TextBox6.Text = "";
+            guna2TextBox9.Text = "";
+            guna2TextBox8.Text = "";
+            guna2TextBox10.PlaceholderText = "ФИО";
+            guna2TextBox7.PlaceholderText = "Номер телефона";
+            guna2TextBox3.PlaceholderText = "Адресс проживания";
+            guna2TextBox12.PlaceholderText = "ИНН";
+            guna2TextBox6.PlaceholderText = "Логин";
+            guna2TextBox9.PlaceholderText = "Пароль";
+            guna2TextBox8.PlaceholderText = "Повторите пароль";
+            guna2ComboBox1.SelectedIndex = -1;
+            guna2ComboBox2.SelectedIndex = -1;
+            guna2ComboBox3.SelectedIndex = -1;
             guna2DataGridView3.Rows.Clear();
             ClaimTable3();
         }
@@ -1227,9 +1318,30 @@ namespace KursovaiJEY
 
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
+            guna2TextBox20.Text = "";
+            guna2TextBox17.Text = "";
+            guna2TextBox15.Text = "";
+            guna2TextBox16.Text = "";
+            guna2TextBox14.Text = "";
+            listBox5.Items.Clear();
+            listBox4.Items.Clear();
             if (SaveData.ID_Claim != null)
             {
-                guna2Panel6.Visible = true;
+                if (guna2DataGridView2.Visible == true && toolStrip1.Visible == true)
+                {
+                    guna2Button8.Visible = false;
+                    guna2Button9.Visible = false;
+                    guna2Button16.Visible = false;
+                    guna2DataGridView2.Visible = false;
+                    toolStrip1.Visible = false;
+                    listBox4.Visible = true;
+                    guna2Panel6.Visible = true;
+                }
+                else
+                {
+                    guna2Panel6.Visible = true;
+                    listBox4.Visible = true;
+                }
                 DBconnect connection = new DBconnect(); //Подключение к базе данных с помощью файла Program.CS
                 connection.openConnection();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
@@ -1272,5 +1384,109 @@ namespace KursovaiJEY
             }
            
         }
+
+        private void guna2DataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex > 0)
+            {
+                guna2DataGridView4.CurrentCell = guna2DataGridView4[e.ColumnIndex, e.RowIndex];
+            }
+            guna2DataGridView4.CurrentRow.Selected = true;
+            GetSelectedIDString4();
+        }
+        public void GetSelectedIDString4()
+        {
+            //Переменная для индекс выбранной строки в гриде
+            string index_selected_rows4;
+            index_selected_rows4 = guna2DataGridView4.SelectedCells[3].RowIndex.ToString();
+            id_selected_rows4 = guna2DataGridView4.Rows[Convert.ToInt32(index_selected_rows4)].Cells[1].Value.ToString();
+            toolStripLabel18.Text = id_selected_rows4;
+            SaveData.ID_Employee = id_selected_rows4;
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            guna2DataGridView4.Rows.Clear();
+            ClaimTable4();
+            listBox4.Items.Clear();
+            listBox4.Items.Add("Данные обновлены");
+        }
+        private void ClaimTable4()
+        {
+            DBconnect connection = new DBconnect();
+            connection.openConnection();
+
+            MySqlCommand command55 = new MySqlCommand("SELECT * FROM Comment", connection.GetConnection());
+            MySqlDataReader reader55 = command55.ExecuteReader();
+            List<string[]> data = new List<string[]>();
+            while (reader55.Read())
+            {
+                data.Add(new string[6]);
+
+                data[data.Count - 1][0] = reader55[0].ToString();
+                data[data.Count - 1][1] = reader55[1].ToString();
+                data[data.Count - 1][2] = reader55[2].ToString();
+                data[data.Count - 1][3] = reader55[3].ToString();
+                data[data.Count - 1][4] = reader55[4].ToString();
+                data[data.Count - 1][5] = reader55[5].ToString();
+            }
+            reader55.Close();
+            connection.closeConnection();
+            foreach (string[] s in data)
+                guna2DataGridView4.Rows.Add(s);
+            int rows = guna2DataGridView4.Rows.Count;
+            toolStripLabel16.Text = Convert.ToString(rows);
+        }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBox14.Text == "")
+            {
+                guna2TextBox10.PlaceholderText = "Введите комментарий";
+                guna2TextBox10.PlaceholderForeColor = Color.Red;
+                return;
+            }
+            DBconnect connection = new DBconnect();
+            connection.openConnection();
+
+            MySqlCommand command222 = new MySqlCommand("INSERT INTO `Comment` (`IDR`, `IDE`, `FIO`, `DataAnswer`, `CommentEmp`) VALUES (@1, @2, @3, @4, @5)", connection.GetConnection());
+
+            string index;
+            index = toolStripLabel3.Text;
+            command222.Parameters.Add("@1", MySqlDbType.VarChar).Value = index;
+            command222.Parameters.Add("@2", MySqlDbType.VarChar).Value = SaveData.IDe;
+            command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.FIOe;
+            command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = DateTime.Now;
+            command222.Parameters.Add("@5", MySqlDbType.VarChar).Value = guna2TextBox14.Text;
+            command222.ExecuteNonQuery();
+            listBox4.Items.Clear();
+            listBox4.Items.Add("Вы оставили свой комментарий к данному обращению");
+            guna2TextBox14.Text = "";
+            connection.closeConnection();
+        }
+
+        private void guna2Button10_Click_1(object sender, EventArgs e)
+        {
+            if (guna2Panel6.Visible == true)
+            {
+                guna2Panel6.Visible = false;
+                guna2DataGridView2.Visible = true;
+                toolStrip1.Visible = true;
+            }
+            else
+            {
+                guna2Panel5.Visible = true;
+            }
+            guna2TextBox20.Text = "";
+            guna2TextBox17.Text = "";
+            guna2TextBox15.Text = "";
+            guna2TextBox16.Text = "";
+            guna2TextBox14.Text = "";
+            listBox5.Items.Clear();
+            listBox4.Items.Clear();
+            guna2DataGridView2.Rows.Clear();
+            ClaimTable();
+        }
+
     }
 }

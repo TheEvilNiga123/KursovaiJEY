@@ -45,6 +45,7 @@ namespace KursovaiJEY
     }
     static class SaveData
     {
+        public static string ID_Employee;
         public static string month;
         public static string day;
         public static string ID_Claim;
@@ -52,11 +53,18 @@ namespace KursovaiJEY
         public static string ID_idAC;
         public static int IDC;
         public static string LOGINC;
-        public static string PASSWORDC;
         public static string FIOC;
         public static string TELEPHONEC;
         public static string ADDRESSC;
         public static int LVLC;
 
+        public static int IDe;
+        public static string LOGINe;
+        public static string FIOe;
+        public static string TELEPHONEe;
+        public static string ADDRESSe;
+        public static string INNe;
+        public static string DoBe;
+        public static int LVLe;
     }
 }

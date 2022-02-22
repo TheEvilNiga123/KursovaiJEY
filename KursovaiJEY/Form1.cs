@@ -25,6 +25,8 @@ namespace KursovaiJEY
             string fio = "0";
             string tel = "0";
             string add = "0";
+            string dob = "0";
+            string inn = "0";
             string loginUser = guna2TextBox1.Text; //Стринговая переменная берёт текстовое значение из поля ТексБокс1
             string passUser = guna2TextBox2.Text;
             DBconnect connection = new DBconnect(); //Подключение к базе данных с помощью файла Program.CS
@@ -34,44 +36,100 @@ namespace KursovaiJEY
             MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
             connection.openConnection();
             MySqlCommand command = new MySqlCommand("SELECT * FROM `ALP` WHERE `login` = @Ul AND `pass` = @Up", connection.GetConnection()); //Создание команды на выборку
-            MySqlCommand command1 = new MySqlCommand("SELECT *, Client.FIO, Client.Telephone, Client.Address, Client.idAC, ALP.idAC FROM `Client`,`ALP` WHERE Client.idAC = ALP.idAC", connection.GetConnection());
             command.Parameters.Add("@Ul", MySqlDbType.VarChar).Value = loginUser; //Заменяем шифр из команды на переменные
             command.Parameters.Add("@Up", MySqlDbType.VarChar).Value = passUser; //зАМЕНЯЕМ ШИФР ИЗ КОМАНДЫ НА переменные
             adapter.SelectCommand = command; // адаптер выберает команду "КОММАНД"
-            adapter.Fill(table); // ВЫБОР таблицы , в котором должны быть значения
-
-            if (table.Rows.Count > 0) //Есть значения - выполняется вход
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                MySqlDataReader reader000 = command.ExecuteReader();
+                List<string[]> data = new List<string[]>();
+                while (reader000.Read())
                 {
-                    idAC = Convert.ToInt32(reader[0]);
-                    loginUser = reader[1].ToString();
-                    passUser = reader[2].ToString();
-                    lvl = Convert.ToInt32(reader[3]); //возможно ошибки
+                    lvl = Convert.ToInt32(reader000[3]);
                 }
-                reader.Close();
+                reader000.Close();
+            }
+            if (lvl == 1)
+            {
 
-                SaveData.IDC = idAC;
-                SaveData.LOGINC = loginUser;
-                SaveData.PASSWORDC = passUser;
-                SaveData.LVLC = lvl;
-                MySqlDataReader reader2 = command1.ExecuteReader();
-                while (reader2.Read())
+                MySqlCommand command1 = new MySqlCommand("SELECT *, Client.FIO, Client.Telephone, Client.Address, Client.idAC, ALP.idAC FROM `Client`,`ALP` WHERE Client.idAC = ALP.idAC", connection.GetConnection());
+                adapter.SelectCommand = command; // адаптер выберает команду "КОММАНД"
+                adapter.Fill(table); // ВЫБОР таблицы , в котором должны быть значения
+
+                if (table.Rows.Count > 0) //Есть значения - выполняется вход
                 {
-                    fio = reader2[2].ToString();
-                    tel = reader2[3].ToString();
-                    add = reader2[4].ToString();
+                    MySqlDataReader reader1 = command.ExecuteReader();
+                    while (reader1.Read())
+                    {
+                        idAC = Convert.ToInt32(reader1[0]);
+                        loginUser = reader1[1].ToString();
+                        lvl = Convert.ToInt32(reader1[3]); //возможно ошибки
+                    }
+                    reader1.Close();
+
+                    SaveData.IDC = idAC;
+                    SaveData.LOGINC = loginUser;
+                    SaveData.LVLC = lvl;
+                    MySqlDataReader reader2 = command1.ExecuteReader();
+                    while (reader2.Read())
+                    {
+                        fio = reader2[2].ToString();
+                        tel = reader2[3].ToString();
+                        add = reader2[4].ToString();
+                    }
+                    reader2.Close();
+                    SaveData.FIOC = fio;
+                    SaveData.TELEPHONEC = tel;
+                    SaveData.ADDRESSC = add;
+                    Hide(); //прятки с форм 1
+                    Form1 avt = new Form1(); //создаёт  переменную форм 1
+                    Form3 menu = new Form3(); //создаёт переменную форм 2
+                    menu.ShowDialog(); // открывается форма3 
+                    avt.Close(); //закрывается форм 1
                 }
-                reader.Close();
-                SaveData.FIOC = fio;
-                SaveData.TELEPHONEC = tel;
-                SaveData.ADDRESSC = add;
-                Hide(); //прятки с форм 1
-                Form1 avt = new Form1(); //создаёт  переменную форм 1
-                Form3 menu = new Form3(); //создаёт переменную форм 2
-                menu.ShowDialog(); // открывается форма3 
-                avt.Close(); //закрывается форм 1
+            }
+            if (lvl > 1)
+            {
+                MySqlCommand command2 = new MySqlCommand("SELECT Employee.idAC, Employee.FIO, Employee.Telephone, Employee.Address, Employee.DoB, Employee.INN FROM `Employee`,`ALP` WHERE Employee.idAC = ALP.idAC", connection.GetConnection());
+                adapter.SelectCommand = command; // адаптер выберает команду "КОММАНД"
+                adapter.Fill(table); // ВЫБОР таблицы , в котором должны быть значения
+
+                if (table.Rows.Count > 0) //Есть значения - выполняется вход
+                {
+                    MySqlDataReader reader3 = command.ExecuteReader();
+                    while (reader3.Read())
+                    {
+                        idAC = Convert.ToInt32(reader3[0]);
+                        loginUser = reader3[1].ToString();
+                        lvl = Convert.ToInt32(reader3[3]); //возможно ошибки
+                    }
+                    reader3.Close();
+
+                    SaveData.IDe = idAC;
+                    SaveData.LOGINe = loginUser;
+                    SaveData.LVLe = lvl;
+                    MySqlDataReader reader4 = command2.ExecuteReader();
+                    while (reader4.Read())
+                    {
+                        fio = reader4[1].ToString();
+                        tel = reader4[2].ToString();
+                        add = reader4[3].ToString();
+                        dob = reader4[4].ToString();
+                        inn = reader4[5].ToString();
+                    }
+                    reader4.Close();
+                    SaveData.FIOe = fio;
+                    SaveData.TELEPHONEe = tel;
+                    SaveData.ADDRESSe = add;
+                    SaveData.DoBe = dob;
+                    SaveData.INNe = inn;
+                    Hide(); //прятки с форм 1
+                    Form1 avt = new Form1(); //создаёт  переменную форм 1
+                    Form3 menu = new Form3(); //создаёт переменную форм 2
+                    menu.ShowDialog(); // открывается форма3 
+                    avt.Close(); //закрывается форм 1
+                }
             }
 
             else //Иначе аккаунта нету или данные ведены неверно

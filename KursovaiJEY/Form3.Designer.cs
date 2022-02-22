@@ -30,15 +30,18 @@ namespace KursovaiJEY
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle201 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle193 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle194 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle195 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle202 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle203 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle204 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle196 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle197 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle198 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
@@ -59,6 +62,7 @@ namespace KursovaiJEY
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -75,7 +79,6 @@ namespace KursovaiJEY
             this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -148,6 +151,7 @@ namespace KursovaiJEY
             this.toolStripLabel13 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel14 = new System.Windows.Forms.ToolStripLabel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listBox5 = new System.Windows.Forms.ListBox();
             this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -156,11 +160,24 @@ namespace KursovaiJEY
             this.guna2TextBox17 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox20 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.IDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDEC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIOEC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataAnswer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommentEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip4 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel15 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel16 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel17 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel18 = new System.Windows.Forms.ToolStripLabel();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -172,6 +189,8 @@ namespace KursovaiJEY
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView3)).BeginInit();
             this.toolStrip3.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).BeginInit();
+            this.toolStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -501,12 +520,39 @@ namespace KursovaiJEY
             this.guna2Panel3.BackColor = System.Drawing.Color.BurlyWood;
             this.guna2Panel3.BackgroundImage = global::KursovaiJEY.Properties.Resources.Скриншот_06_02_2022_225555;
             this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.Controls.Add(this.guna2Panel5);
             this.guna2Panel3.Location = new System.Drawing.Point(-49, -19);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(211, 145);
             this.guna2Panel3.TabIndex = 12;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 21;
+            this.guna2Button2.BorderThickness = 1;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.IndicateFocus = true;
+            this.guna2Button2.Location = new System.Drawing.Point(9, 132);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(95, 45);
+            this.guna2Button2.TabIndex = 0;
+            this.guna2Button2.Text = "Главная";
+            this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Panel5
             // 
@@ -528,10 +574,10 @@ namespace KursovaiJEY
             this.guna2Panel5.Controls.Add(this.guna2Button18);
             this.guna2Panel5.Controls.Add(this.guna2TextBox9);
             this.guna2Panel5.Controls.Add(this.guna2TextBox10);
-            this.guna2Panel5.Location = new System.Drawing.Point(58, 124);
+            this.guna2Panel5.Location = new System.Drawing.Point(111, 0);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(483, 446);
+            this.guna2Panel5.Size = new System.Drawing.Size(484, 448);
             this.guna2Panel5.TabIndex = 30;
             this.guna2Panel5.Visible = false;
             // 
@@ -1042,34 +1088,6 @@ namespace KursovaiJEY
             this.guna2TextBox10.TabIndex = 0;
             this.guna2TextBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox10_KeyPress);
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 21;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.IndicateFocus = true;
-            this.guna2Button2.Location = new System.Drawing.Point(9, 132);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(95, 45);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Главная";
-            this.guna2Button2.UseTransparentBackground = true;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.Gainsboro;
@@ -1083,7 +1101,7 @@ namespace KursovaiJEY
             "  ООО «ЖЭУ-10» занимается управлением ",
             "    и обслуживанием многоквартирных домов",
             "      Калининский района города Челябинска."});
-            this.listBox1.Location = new System.Drawing.Point(126, 84);
+            this.listBox1.Location = new System.Drawing.Point(126, 139);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(459, 193);
             this.listBox1.TabIndex = 8;
@@ -1095,7 +1113,7 @@ namespace KursovaiJEY
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = global::KursovaiJEY.Properties.Resources.Скриншот_08_02_2022_161544;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(234, 62);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(208, 96);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(295, 311);
@@ -1137,7 +1155,7 @@ namespace KursovaiJEY
             "Суббота            12:00 - 17:00",
             "Воскресенье    ВЫХОДНОЙ ",
             "Номер телефона - +7 (932) 304-76-07     "});
-            this.listBox2.Location = new System.Drawing.Point(176, 84);
+            this.listBox2.Location = new System.Drawing.Point(178, 84);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(350, 214);
             this.listBox2.TabIndex = 11;
@@ -1234,22 +1252,22 @@ namespace KursovaiJEY
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle49.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle199.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle199;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.guna2DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle200.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle200.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle200.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle200.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle200.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle200.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle200.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle200;
             this.guna2DataGridView1.ColumnHeadersHeight = 20;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDKC,
@@ -1257,21 +1275,21 @@ namespace KursovaiJEY
             this.FIOC,
             this.TelephoneC,
             this.AddressC});
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle201.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle201.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle201.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle201.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle201.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle201.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle201.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle201;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(127, 77);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(111, 77);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(460, 353);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(483, 371);
             this.guna2DataGridView1.TabIndex = 21;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1299,35 +1317,35 @@ namespace KursovaiJEY
             // 
             // IDKC
             // 
-            this.IDKC.HeaderText = "IDKC";
+            this.IDKC.HeaderText = "Айди аккаунта ";
             this.IDKC.Name = "IDKC";
             this.IDKC.ReadOnly = true;
-            this.IDKC.Width = 63;
+            this.IDKC.Width = 130;
             // 
             // idAC
             // 
-            this.idAC.HeaderText = "idAC";
+            this.idAC.HeaderText = "Айди ";
             this.idAC.Name = "idAC";
             this.idAC.ReadOnly = true;
-            this.idAC.Width = 62;
+            this.idAC.Width = 70;
             // 
             // FIOC
             // 
-            this.FIOC.HeaderText = "FIOC";
+            this.FIOC.HeaderText = "ФИО ";
             this.FIOC.Name = "FIOC";
-            this.FIOC.Width = 64;
+            this.FIOC.Width = 68;
             // 
             // TelephoneC
             // 
-            this.TelephoneC.HeaderText = "TelephoneC";
+            this.TelephoneC.HeaderText = "Телефон";
             this.TelephoneC.Name = "TelephoneC";
-            this.TelephoneC.Width = 104;
+            this.TelephoneC.Width = 87;
             // 
             // AddressC
             // 
-            this.AddressC.HeaderText = "AddressC";
+            this.AddressC.HeaderText = "Адресс ";
             this.AddressC.Name = "AddressC";
-            this.AddressC.Width = 91;
+            this.AddressC.Width = 81;
             // 
             // guna2Panel4
             // 
@@ -1342,7 +1360,7 @@ namespace KursovaiJEY
             this.guna2Panel4.Controls.Add(this.guna2Button15);
             this.guna2Panel4.Controls.Add(this.guna2TextBox2);
             this.guna2Panel4.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel4.Location = new System.Drawing.Point(231, 84);
+            this.guna2Panel4.Location = new System.Drawing.Point(221, 101);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(271, 310);
@@ -1393,7 +1411,7 @@ namespace KursovaiJEY
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(48, 21);
+            this.label2.Location = new System.Drawing.Point(51, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 34);
             this.label2.TabIndex = 0;
@@ -1560,22 +1578,22 @@ namespace KursovaiJEY
             // 
             this.guna2DataGridView2.AllowUserToAddRows = false;
             this.guna2DataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle193.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle193;
             this.guna2DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.guna2DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle194.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle194.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle194.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle194.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle194.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle194.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle194.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle194;
             this.guna2DataGridView2.ColumnHeadersHeight = 20;
             this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDClaim,
@@ -1585,22 +1603,22 @@ namespace KursovaiJEY
             this.Address,
             this.DoI,
             this.DataReport});
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle195.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle195.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle195.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle195.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle195.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle195.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle195.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle195;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.Location = new System.Drawing.Point(128, 85);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(111, 77);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.ReadOnly = true;
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(459, 354);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(483, 371);
             this.guna2DataGridView2.TabIndex = 23;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1644,39 +1662,39 @@ namespace KursovaiJEY
             // 
             // FIO
             // 
-            this.FIO.HeaderText = "FIO";
+            this.FIO.HeaderText = "ФИО";
             this.FIO.Name = "FIO";
             this.FIO.ReadOnly = true;
-            this.FIO.Width = 55;
+            this.FIO.Width = 64;
             // 
             // Telephone
             // 
-            this.Telephone.HeaderText = "Telephone";
+            this.Telephone.HeaderText = "Телефон";
             this.Telephone.Name = "Telephone";
             this.Telephone.ReadOnly = true;
-            this.Telephone.Width = 95;
+            this.Telephone.Width = 87;
             // 
             // Address
             // 
-            this.Address.HeaderText = "Address";
+            this.Address.HeaderText = "Адресс";
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 82;
+            this.Address.Width = 77;
             // 
             // DoI
             // 
-            this.DoI.HeaderText = "DoI";
+            this.DoI.HeaderText = "Комментарий";
             this.DoI.Name = "DoI";
             this.DoI.ReadOnly = true;
-            this.DoI.Width = 55;
+            this.DoI.Width = 121;
             // 
             // DataReport
             // 
-            this.DataReport.HeaderText = "DataReport";
+            this.DataReport.HeaderText = "Дата жалобы";
             this.DataReport.MaxInputLength = 11;
             this.DataReport.Name = "DataReport";
             this.DataReport.ReadOnly = true;
-            this.DataReport.Width = 103;
+            this.DataReport.Width = 117;
             // 
             // guna2Button16
             // 
@@ -1723,7 +1741,7 @@ namespace KursovaiJEY
             this.toolStripSeparator3,
             this.toolStripLabel5,
             this.toolStripLabel6});
-            this.toolStrip1.Location = new System.Drawing.Point(126, 53);
+            this.toolStrip1.Location = new System.Drawing.Point(111, 52);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(436, 25);
             this.toolStrip1.TabIndex = 26;
@@ -1823,7 +1841,7 @@ namespace KursovaiJEY
             this.toolStripSeparator5,
             this.toolStripLabel9,
             this.toolStripLabel10});
-            this.toolStrip2.Location = new System.Drawing.Point(126, 52);
+            this.toolStrip2.Location = new System.Drawing.Point(111, 52);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(321, 25);
             this.toolStrip2.TabIndex = 27;
@@ -1888,22 +1906,22 @@ namespace KursovaiJEY
             // 
             this.guna2DataGridView3.AllowUserToAddRows = false;
             this.guna2DataGridView3.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle52.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle202.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle202;
             this.guna2DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.guna2DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.guna2DataGridView3.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle53.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle203.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle203.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle203.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle203.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle203.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle203.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle203.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle203;
             this.guna2DataGridView3.ColumnHeadersHeight = 20;
             this.guna2DataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDE,
@@ -1913,21 +1931,21 @@ namespace KursovaiJEY
             this.AddressE,
             this.DoBe,
             this.INNE});
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle54.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle54.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle204.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle204.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle204.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle204.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle204.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle204.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle204.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle204;
             this.guna2DataGridView3.EnableHeadersVisualStyles = false;
             this.guna2DataGridView3.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView3.Location = new System.Drawing.Point(128, 78);
+            this.guna2DataGridView3.Location = new System.Drawing.Point(111, 77);
             this.guna2DataGridView3.Name = "guna2DataGridView3";
             this.guna2DataGridView3.RowHeadersVisible = false;
             this.guna2DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView3.Size = new System.Drawing.Size(460, 346);
+            this.guna2DataGridView3.Size = new System.Drawing.Size(482, 371);
             this.guna2DataGridView3.TabIndex = 28;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1955,47 +1973,47 @@ namespace KursovaiJEY
             // 
             // IDE
             // 
-            this.IDE.HeaderText = "IDE";
+            this.IDE.HeaderText = "Айди аккаунта";
             this.IDE.Name = "IDE";
             this.IDE.ReadOnly = true;
-            this.IDE.Width = 54;
+            this.IDE.Width = 126;
             // 
             // idACE
             // 
-            this.idACE.HeaderText = "idACE";
+            this.idACE.HeaderText = "Айди";
             this.idACE.Name = "idACE";
             this.idACE.ReadOnly = true;
-            this.idACE.Width = 69;
+            this.idACE.Width = 66;
             // 
             // FIOE
             // 
-            this.FIOE.HeaderText = "FIOE";
+            this.FIOE.HeaderText = "ФИО";
             this.FIOE.Name = "FIOE";
-            this.FIOE.Width = 62;
+            this.FIOE.Width = 64;
             // 
             // TelephoneE
             // 
-            this.TelephoneE.HeaderText = "TelephoneE";
+            this.TelephoneE.HeaderText = "Телефон ";
             this.TelephoneE.Name = "TelephoneE";
-            this.TelephoneE.Width = 102;
+            this.TelephoneE.Width = 91;
             // 
             // AddressE
             // 
-            this.AddressE.HeaderText = "AddressE";
+            this.AddressE.HeaderText = "Адресс";
             this.AddressE.Name = "AddressE";
-            this.AddressE.Width = 89;
+            this.AddressE.Width = 77;
             // 
             // DoBe
             // 
-            this.DoBe.HeaderText = "DoBe";
+            this.DoBe.HeaderText = "Дата рождения";
             this.DoBe.Name = "DoBe";
-            this.DoBe.Width = 66;
+            this.DoBe.Width = 131;
             // 
             // INNE
             // 
-            this.INNE.HeaderText = "INNE";
+            this.INNE.HeaderText = "ИНН";
             this.INNE.Name = "INNE";
-            this.INNE.Width = 64;
+            this.INNE.Width = 63;
             // 
             // toolStrip3
             // 
@@ -2010,9 +2028,9 @@ namespace KursovaiJEY
             this.toolStripSeparator6,
             this.toolStripLabel13,
             this.toolStripLabel14});
-            this.toolStrip3.Location = new System.Drawing.Point(126, 52);
+            this.toolStrip3.Location = new System.Drawing.Point(111, 52);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(388, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(419, 25);
             this.toolStrip3.TabIndex = 29;
             this.toolStrip3.Text = "toolStrip3";
             this.toolStrip3.Visible = false;
@@ -2095,12 +2113,22 @@ namespace KursovaiJEY
             this.guna2Panel6.Controls.Add(this.guna2TextBox17);
             this.guna2Panel6.Controls.Add(this.guna2Button11);
             this.guna2Panel6.Controls.Add(this.guna2TextBox20);
-            this.guna2Panel6.Location = new System.Drawing.Point(111, 54);
+            this.guna2Panel6.Location = new System.Drawing.Point(111, -1);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
-            this.guna2Panel6.Size = new System.Drawing.Size(483, 394);
+            this.guna2Panel6.Size = new System.Drawing.Size(484, 448);
             this.guna2Panel6.TabIndex = 31;
             this.guna2Panel6.Visible = false;
+            // 
+            // listBox5
+            // 
+            this.listBox5.ColumnWidth = 10;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.HorizontalExtent = 10;
+            this.listBox5.Location = new System.Drawing.Point(246, 94);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(224, 160);
+            this.listBox5.TabIndex = 14;
             // 
             // guna2TextBox14
             // 
@@ -2125,7 +2153,7 @@ namespace KursovaiJEY
             this.guna2TextBox14.HoverState.Parent = this.guna2TextBox14;
             this.guna2TextBox14.IconLeft = global::KursovaiJEY.Properties.Resources.icons8_новое_соглашение_48;
             this.guna2TextBox14.Location = new System.Drawing.Point(143, 265);
-            this.guna2TextBox14.MaxLength = 12;
+            this.guna2TextBox14.MaxLength = 250;
             this.guna2TextBox14.Name = "guna2TextBox14";
             this.guna2TextBox14.PasswordChar = '\0';
             this.guna2TextBox14.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -2161,6 +2189,7 @@ namespace KursovaiJEY
             this.guna2Button10.Size = new System.Drawing.Size(39, 26);
             this.guna2Button10.TabIndex = 11;
             this.guna2Button10.UseTransparentBackground = true;
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click_1);
             // 
             // label7
             // 
@@ -2295,6 +2324,7 @@ namespace KursovaiJEY
             this.guna2Button11.Size = new System.Drawing.Size(200, 47);
             this.guna2Button11.TabIndex = 3;
             this.guna2Button11.Text = "Создать аккаунт";
+            this.guna2Button11.Click += new System.EventHandler(this.guna2Button11_Click);
             // 
             // guna2TextBox20
             // 
@@ -2328,15 +2358,180 @@ namespace KursovaiJEY
             this.guna2TextBox20.Size = new System.Drawing.Size(220, 36);
             this.guna2TextBox20.TabIndex = 0;
             // 
-            // listBox5
+            // guna2DataGridView4
             // 
-            this.listBox5.ColumnWidth = 10;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.HorizontalExtent = 10;
-            this.listBox5.Location = new System.Drawing.Point(246, 94);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(224, 160);
-            this.listBox5.TabIndex = 14;
+            this.guna2DataGridView4.AllowUserToAddRows = false;
+            this.guna2DataGridView4.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle196.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle196;
+            this.guna2DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.guna2DataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.guna2DataGridView4.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.guna2DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle197.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle197.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle197.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle197.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle197.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle197.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle197.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle197;
+            this.guna2DataGridView4.ColumnHeadersHeight = 20;
+            this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDN,
+            this.IDR,
+            this.IDEC,
+            this.FIOEC,
+            this.DataAnswer,
+            this.CommentEmp});
+            dataGridViewCellStyle198.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle198.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle198.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle198.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle198.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle198.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle198.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle198;
+            this.guna2DataGridView4.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView4.GridColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.Location = new System.Drawing.Point(112, 77);
+            this.guna2DataGridView4.Name = "guna2DataGridView4";
+            this.guna2DataGridView4.ReadOnly = true;
+            this.guna2DataGridView4.RowHeadersVisible = false;
+            this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView4.Size = new System.Drawing.Size(483, 371);
+            this.guna2DataGridView4.TabIndex = 30;
+            this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView4.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.guna2DataGridView4.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView4.ThemeStyle.HeaderStyle.Height = 20;
+            this.guna2DataGridView4.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView4.Visible = false;
+            this.guna2DataGridView4.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.guna2DataGridView4_CellMouseClick);
+            // 
+            // IDN
+            // 
+            this.IDN.HeaderText = "IDN";
+            this.IDN.Name = "IDN";
+            this.IDN.ReadOnly = true;
+            this.IDN.Visible = false;
+            this.IDN.Width = 57;
+            // 
+            // IDR
+            // 
+            this.IDR.HeaderText = "Номер жалобы";
+            this.IDR.Name = "IDR";
+            this.IDR.ReadOnly = true;
+            this.IDR.Width = 130;
+            // 
+            // IDEC
+            // 
+            this.IDEC.HeaderText = "IDEC";
+            this.IDEC.Name = "IDEC";
+            this.IDEC.ReadOnly = true;
+            this.IDEC.Visible = false;
+            this.IDEC.Width = 63;
+            // 
+            // FIOEC
+            // 
+            this.FIOEC.HeaderText = "ФИО Сотрудника";
+            this.FIOEC.Name = "FIOEC";
+            this.FIOEC.ReadOnly = true;
+            this.FIOEC.Width = 144;
+            // 
+            // DataAnswer
+            // 
+            this.DataAnswer.HeaderText = "Дата ответа";
+            this.DataAnswer.Name = "DataAnswer";
+            this.DataAnswer.ReadOnly = true;
+            this.DataAnswer.Width = 108;
+            // 
+            // CommentEmp
+            // 
+            this.CommentEmp.HeaderText = "Комментарий сотрудника";
+            this.CommentEmp.Name = "CommentEmp";
+            this.CommentEmp.ReadOnly = true;
+            this.CommentEmp.Width = 198;
+            // 
+            // toolStrip4
+            // 
+            this.toolStrip4.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton9,
+            this.toolStripSeparator8,
+            this.toolStripLabel15,
+            this.toolStripLabel16,
+            this.toolStripSeparator9,
+            this.toolStripLabel17,
+            this.toolStripLabel18});
+            this.toolStrip4.Location = new System.Drawing.Point(111, 52);
+            this.toolStrip4.Name = "toolStrip4";
+            this.toolStrip4.Size = new System.Drawing.Size(314, 25);
+            this.toolStrip4.TabIndex = 30;
+            this.toolStrip4.Text = "toolStrip4";
+            this.toolStrip4.Visible = false;
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = global::KursovaiJEY.Properties.Resources.icons8_обновить_50;
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "toolStripButton1";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel15
+            // 
+            this.toolStripLabel15.Name = "toolStripLabel15";
+            this.toolStripLabel15.Size = new System.Drawing.Size(132, 22);
+            this.toolStripLabel15.Text = "Общее кол-во ответов";
+            // 
+            // toolStripLabel16
+            // 
+            this.toolStripLabel16.Name = "toolStripLabel16";
+            this.toolStripLabel16.Size = new System.Drawing.Size(14, 22);
+            this.toolStripLabel16.Text = "n";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel17
+            // 
+            this.toolStripLabel17.Name = "toolStripLabel17";
+            this.toolStripLabel17.Size = new System.Drawing.Size(101, 22);
+            this.toolStripLabel17.Text = "Айди сотрудника";
+            // 
+            // toolStripLabel18
+            // 
+            this.toolStripLabel18.Name = "toolStripLabel18";
+            this.toolStripLabel18.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel18.Text = "n1";
             // 
             // Form3
             // 
@@ -2346,7 +2541,7 @@ namespace KursovaiJEY
             this.BackgroundImage = global::KursovaiJEY.Properties.Resources._1614338139_68_p_svetloe_derevo_fon_94;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(764, 462);
-            this.Controls.Add(this.guna2Panel6);
+            this.Controls.Add(this.toolStrip4);
             this.Controls.Add(this.guna2Button9);
             this.Controls.Add(this.toolStrip3);
             this.Controls.Add(this.guna2Button16);
@@ -2355,16 +2550,19 @@ namespace KursovaiJEY
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Panel4);
-            this.Controls.Add(this.guna2Button7);
-            this.Controls.Add(this.guna2DataGridView2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.guna2DataGridView2);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.guna2DataGridView4);
+            this.Controls.Add(this.guna2Panel4);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.guna2Button7);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2DataGridView3);
+            this.Controls.Add(this.guna2Panel6);
+            this.Controls.Add(this.guna2Panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2374,7 +2572,6 @@ namespace KursovaiJEY
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
@@ -2392,6 +2589,9 @@ namespace KursovaiJEY
             this.toolStrip3.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).EndInit();
+            this.toolStrip4.ResumeLayout(false);
+            this.toolStrip4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2446,13 +2646,6 @@ namespace KursovaiJEY
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDClaim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DoI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataReport;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
@@ -2466,11 +2659,6 @@ namespace KursovaiJEY
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDKC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idAC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIOC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelephoneC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AddressC;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
         private System.Windows.Forms.ToolStripLabel toolStripLabel10;
         private System.Windows.Forms.ToolStrip toolStrip3;
@@ -2492,13 +2680,6 @@ namespace KursovaiJEY
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox12;
         private Guna.UI2.WinForms.Guna2Button guna2Button17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idACE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIOE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelephoneE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AddressE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DoBe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn INNE;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel13;
         private System.Windows.Forms.ToolStripLabel toolStripLabel14;
@@ -2517,5 +2698,39 @@ namespace KursovaiJEY
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox20;
         private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ToolStrip toolStrip4;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel15;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel16;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel17;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDKC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FIOC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelephoneC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddressC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idACE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FIOE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelephoneE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddressE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoBe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INNE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDEC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FIOEC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataAnswer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommentEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDClaim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataReport;
     }
 }
