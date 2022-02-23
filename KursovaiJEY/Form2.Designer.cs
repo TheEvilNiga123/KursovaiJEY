@@ -257,6 +257,7 @@ namespace KursovaiJEY
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Size = new System.Drawing.Size(200, 36);
             this.guna2TextBox3.TabIndex = 5;
+            this.guna2TextBox3.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             this.guna2TextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox3_KeyPress);
             // 
             // guna2ToggleSwitch1

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace KursovaiJEY
 {
@@ -41,6 +42,7 @@ namespace KursovaiJEY
                 toolStripButton4.Visible = false;
                 guna2Button12.Visible = false;
                 guna2Button13.Visible = false;
+                guna2Button19.Visible = true;
                 label1.Text = SaveData.LOGINC;
             }
             if (SaveData.LVLe == 2)
@@ -60,7 +62,9 @@ namespace KursovaiJEY
             guna2TextBox8.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2TextBox9.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
             guna2ToggleSwitch1.Visible = false;
-
+            guna2TextBox26.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+            guna2TextBox27.UseSystemPasswordChar = true; //Загружает для тест бокса при запуске значение 1!)
+            guna2ToggleSwitch2.Visible = false;
             listBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             listBox5.MeasureItem += lst_MeasureItem;
             listBox5.DrawItem += lst_DrawItem;
@@ -93,6 +97,7 @@ namespace KursovaiJEY
             {
                 guna2PictureBox3.Visible = false;
                 listBox2.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2Button7.Visible = false;
                 guna2Button8.Visible = false;
                 guna2Button9.Visible = false;
@@ -144,6 +149,7 @@ namespace KursovaiJEY
                 guna2Button16.Visible = false;
                 guna2Panel6.Visible = false;
                 listBox4.Visible = false;
+                guna2Panel7.Visible = false;
                 listBox1.Visible = true;
 
             }
@@ -176,6 +182,7 @@ namespace KursovaiJEY
                 listBox4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2Button16.Visible = false;
                 listBox4.Visible = false;
                 guna2PictureBox3.Visible = true;
@@ -210,6 +217,7 @@ namespace KursovaiJEY
                 guna2Panel6.Visible = false;
                 guna2Button16.Visible = false;
                 toolStrip4.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2DataGridView4.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
@@ -249,6 +257,7 @@ namespace KursovaiJEY
                     guna2DataGridView4.Visible = false;
                     guna2DataGridView3.Visible = false;
                     toolStrip3.Visible = false;
+                    guna2Panel7.Visible = false;
                     guna2Button8.Visible = true;
                     guna2Button9.Visible = true;
                     guna2Button16.Visible = true;
@@ -347,6 +356,7 @@ namespace KursovaiJEY
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 toolStrip4.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2DataGridView4.Visible = false;
                 guna2Button16.Visible = true;
                 guna2Button8.Visible = true;
@@ -374,6 +384,7 @@ namespace KursovaiJEY
                 guna2DataGridView2.Visible = false;
                 toolStrip1.Visible = false;
                 toolStrip2.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 toolStrip4.Visible = true;
@@ -581,6 +592,7 @@ namespace KursovaiJEY
                 guna2DataGridView1.Visible = false;
                 guna2Panel4.Visible = false;
                 toolStrip2.Visible = false;
+                guna2Panel7.Visible = false;
                 guna2DataGridView3.Visible = false;
                 toolStrip3.Visible = false;
                 guna2Button9.Visible = true;
@@ -1258,6 +1270,18 @@ namespace KursovaiJEY
                 guna2ToggleSwitch1.Checked = true;
             }
         }
+        private void guna2TextBox8_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox8.Text != "")
+            {
+                guna2ToggleSwitch1.Visible = true;
+            }
+            else if (guna2TextBox8.Text == "")
+            {
+                guna2ToggleSwitch1.Visible = false;
+                guna2ToggleSwitch1.Checked = true;
+            }
+        }
         private void ClaimTable3()
         {
             DBconnect connection = new DBconnect();
@@ -1621,6 +1645,441 @@ namespace KursovaiJEY
                         }
                     }
                 }
+            }
+        }
+
+        private void guna2Button19_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Clear();
+            guna2TextBox21.Text = "";
+            guna2TextBox22.Text = "";
+            guna2TextBox23.Text = "";
+            guna2TextBox24.Text = "";
+            if (guna2Panel7.Visible == false)
+            {
+                listBox1.Visible = false;
+                guna2PictureBox2.Visible = false;
+                guna2PictureBox3.Visible = false;
+                listBox2.Visible = false;
+                guna2Button7.Visible = false;
+                guna2Button9.Visible = false;
+                guna2DataGridView1.Visible = false;
+                guna2DataGridView2.Visible = false;
+                toolStrip1.Visible = false;
+                toolStrip2.Visible = false;
+                listBox4.Visible = false;
+                guna2DataGridView3.Visible = false;
+                toolStrip3.Visible = false;
+                toolStrip4.Visible = false;
+                guna2DataGridView4.Visible = false;
+                guna2Button16.Visible = false;
+                guna2Button8.Visible = false;
+                guna2Panel4.Visible = false;
+                listBox4.Visible = true;
+                guna2Panel7.Visible = true;
+            }
+
+            else
+            {
+                guna2Panel7.Visible = true;
+                listBox4.Visible = true;
+            }
+            DBconnect connection = new DBconnect();
+            connection.openConnection();
+
+            MySqlCommand command99 = new MySqlCommand("SELECT * FROM Client", connection.GetConnection());
+            MySqlDataReader reader99 = command99.ExecuteReader();
+            List<string[]> data1 = new List<string[]>();
+            while (reader99.Read())
+            {
+                data1.Add(new string[4]);
+                int proverka = Convert.ToInt32(reader99[1]);
+                if (proverka == SaveData.IDC) 
+                {
+                    guna2TextBox19.Text = reader99[2].ToString();
+                    guna2TextBox13.Text = reader99[3].ToString();
+                    guna2TextBox11.Text = reader99[4].ToString();
+                }
+            }
+            reader99.Close();
+
+            MySqlCommand command88 = new MySqlCommand("SELECT * FROM ALP", connection.GetConnection());
+            MySqlDataReader reader88 = command88.ExecuteReader();
+            List<string[]> data2 = new List<string[]>();
+            while (reader88.Read())
+            {
+                data2.Add(new string[2]);
+                int proverka = Convert.ToInt32(reader88[0]);
+                if (proverka == SaveData.IDC)
+                {
+                    guna2TextBox18.Text = reader88[1].ToString();
+                }
+            }
+            reader88.Close();
+            connection.closeConnection();
+        }
+
+        private void guna2Button22_Click(object sender, EventArgs e)
+        {
+            if (guna2Panel7.Visible == true)
+            {
+                guna2Panel7.Visible = false;
+                listBox4.Visible = false;
+            }
+        }
+
+        private void guna2Button21_Click(object sender, EventArgs e)
+        {
+            if(guna2TextBox21.Text == "" || guna2TextBox22.Text == "" || guna2TextBox23.Text == "" || guna2TextBox24.Text == "")
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не ввели какие-либо данные");
+            }
+            DBconnect connection = new DBconnect();
+            connection.openConnection();
+            string fio_c = guna2TextBox21.Text;
+            string tel_c = guna2TextBox22.Text;
+            string add_c = guna2TextBox23.Text;
+            string log_c = guna2TextBox24.Text;
+            if (fio_c != SaveData.FIOC)
+            {
+                if (fio_c != "")
+                {
+                    MySqlCommand command99_1 = new MySqlCommand($"UPDATE Client SET FIO = '{fio_c}' WHERE idAC = {SaveData.IDC};", connection.GetConnection());
+                    command99_1.ExecuteNonQuery();
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы изменили свои данные");
+                    guna2TextBox19.Text = fio_c;
+                    SaveData.FIOC = fio_c;
+                    guna2TextBox21.Text = "";
+                }
+            }
+            else
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не можете поменять данные на те же самые");
+            }
+            if (tel_c != SaveData.TELEPHONEC)
+            {
+                if (tel_c != "")
+                {
+                    MySqlCommand command99_2 = new MySqlCommand($"UPDATE Client SET Telephone = '{tel_c}' WHERE idAC = {SaveData.IDC};", connection.GetConnection());
+                    command99_2.ExecuteNonQuery();
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы изменили свои данные");
+                    guna2TextBox13.Text = tel_c;
+                    SaveData.TELEPHONEC = tel_c;
+                    guna2TextBox22.Text = "";
+                }
+            }
+            else
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не можете поменять данные на те же самые");
+            }
+            if (add_c != SaveData.ADDRESSC)
+            {
+                if (add_c != "")
+                {
+                    MySqlCommand command99_3 = new MySqlCommand($"UPDATE Client SET Address = '{add_c}' WHERE idAC = {SaveData.IDC};", connection.GetConnection());
+                    command99_3.ExecuteNonQuery();
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы изменили свои данные");
+                    guna2TextBox11.Text = add_c;
+                    SaveData.ADDRESSC = add_c;
+                    guna2TextBox23.Text = "";
+                }
+            }
+            else
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не можете поменять данные на те же самые");
+            }
+
+
+
+            DataTable table = new DataTable(); //Создание таблицы
+            MySqlDataAdapter adapter = new MySqlDataAdapter(); //Создание адаптера
+            MySqlCommand command5 = new MySqlCommand("SELECT * FROM `ALP` WHERE `login` = @Ul", connection.GetConnection()); //Создание команды на выборку
+            command5.Parameters.Add("@Ul", MySqlDbType.VarChar).Value = guna2TextBox24.Text; //Заменяем шифр из команды на переменные
+            adapter.SelectCommand = command5; // адаптер выберает команду "КОММАНД"
+            adapter.Fill(table); // ВЫБОР таблицы , в котором должны быть значения
+            if (table.Rows.Count > 0) //Есть значения - выполняется вход
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Логин уже занят");
+            }
+            else
+            {
+                if (log_c != SaveData.LOGINC)
+                {
+                    if (log_c != "")
+                    {
+                        MySqlCommand command99_4 = new MySqlCommand($"UPDATE ALP SET login = '{log_c}' WHERE idAC = {SaveData.IDC};", connection.GetConnection());
+                        command99_4.ExecuteNonQuery();
+                        listBox4.Items.Clear();
+                        listBox4.Items.Add("Вы изменили свои данные");
+                        label1.Text = log_c;
+                        guna2TextBox18.Text = log_c;
+                        SaveData.LOGINC = log_c;
+                        guna2TextBox24.Text = "";
+                    }
+                }
+                else
+                {
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы не можете поменять данные на те же самые");
+                }
+            }
+            connection.closeConnection();
+
+        }
+
+        private void guna2Button20_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Clear();
+            guna2TextBox21.Text = "";
+            guna2TextBox22.Text = "";
+            guna2TextBox23.Text = "";
+            guna2TextBox24.Text = "";
+            guna2TextBox25.Text = "";
+            guna2TextBox26.Text = "";
+            guna2TextBox27.Text = "";
+            if (guna2Button23.Visible == false)
+            {
+                guna2Button20.Visible = false;
+                guna2Button21.Visible = false;
+                guna2TextBox19.Visible = false;
+                guna2TextBox11.Visible = false;
+                guna2TextBox13.Visible = false;
+                guna2TextBox18.Visible = false;
+                guna2TextBox21.Visible = false;
+                guna2TextBox22.Visible = false;
+                guna2TextBox23.Visible = false;
+                guna2TextBox24.Visible = false;
+
+                guna2Button23.Visible = true;
+                guna2Button24.Visible = true;
+                guna2TextBox25.Visible = true;
+                guna2TextBox26.Visible = true;
+                guna2TextBox27.Visible = true;
+            }
+
+            else
+            {
+                guna2Button23.Visible = true;
+                guna2Button24.Visible = true;
+                guna2TextBox25.Visible = true;
+                guna2TextBox26.Visible = true;
+                guna2TextBox27.Visible = true;
+            }
+        }
+
+        private void guna2Button23_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Clear();
+            guna2TextBox21.Text = "";
+            guna2TextBox22.Text = "";
+            guna2TextBox23.Text = "";
+            guna2TextBox24.Text = "";
+            if (guna2Button20.Visible == false)
+            {
+                guna2Button20.Visible = true;
+                guna2Button21.Visible = true;
+                guna2TextBox19.Visible = true;
+                guna2TextBox11.Visible = true;
+                guna2TextBox13.Visible = true;
+                guna2TextBox18.Visible = true;
+                guna2TextBox21.Visible = true;
+                guna2TextBox22.Visible = true;
+                guna2TextBox23.Visible = true;
+                guna2TextBox24.Visible = true;
+
+                guna2Button23.Visible = false;
+                guna2Button24.Visible = false;
+                guna2TextBox25.Visible = false;
+                guna2TextBox26.Visible = false;
+                guna2TextBox27.Visible = false;
+            }
+
+            else
+            {
+                guna2Button20.Visible = true;
+                guna2Button21.Visible = true;
+                guna2TextBox19.Visible = true;
+                guna2TextBox11.Visible = true;
+                guna2TextBox13.Visible = true;
+                guna2TextBox18.Visible = true;
+                guna2TextBox21.Visible = true;
+                guna2TextBox22.Visible = true;
+                guna2TextBox23.Visible = true;
+                guna2TextBox24.Visible = true;
+            }
+        }
+        private void guna2Button24_Click(object sender, EventArgs e)
+        {
+            if (guna2TextBox25.Text == "")
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы не ввели старый пароль");
+            }
+            if (SaveData.PASSWORDC != PassHide.Hash(guna2TextBox25.Text))
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Вы ввели неверный старый пароль");
+            }
+            else
+            {
+                DBconnect connection = new DBconnect();
+                connection.openConnection();
+                if (guna2TextBox26.Text == guna2TextBox25.Text)
+                {
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Старый и новый пароль совпадают");
+                }
+                if (guna2TextBox26.Text == guna2TextBox27.Text)
+                {
+                    string pass_c = guna2TextBox26.Text;
+                    MySqlCommand command667 = new MySqlCommand($"UPDATE ALP SET pass = '{PassHide.Hash(pass_c)}' WHERE idAC = {SaveData.IDC};", connection.GetConnection());
+                    command667.ExecuteNonQuery();
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Вы поменяли Ваш пароль");
+                    SaveData.PASSWORDC = PassHide.Hash(pass_c);
+                    guna2TextBox25.Text = "";
+                    guna2TextBox26.Text = "";
+                    guna2TextBox27.Text = "";
+                }
+                else
+                {
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Ведённые Вами пароли не совпадают");
+                }
+                connection.closeConnection();
+            }
+
+        }
+
+        private void guna2TextBox26_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox26.Text != "")
+            {
+                guna2ToggleSwitch2.Visible = true;
+            }
+            else if (guna2TextBox26.Text == "")
+            {
+                guna2ToggleSwitch2.Visible = false;
+                guna2ToggleSwitch2.Checked = true;
+            }
+        }
+
+        private void guna2TextBox27_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox27.Text != "")
+            {
+                guna2ToggleSwitch2.Visible = true;
+            }
+            else if (guna2TextBox27.Text == "")
+            {
+                guna2ToggleSwitch2.Visible = false;
+                guna2ToggleSwitch2.Checked = true;
+            }
+        }
+
+        private void guna2ToggleSwitch2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (guna2ToggleSwitch2.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
+            {
+                guna2TextBox26.UseSystemPasswordChar = true;
+            }
+            else if (guna2ToggleSwitch2.Checked == false) // если не активирован, то всё по дефолту
+            {
+                guna2TextBox26.UseSystemPasswordChar = false;
+            }
+            if (guna2ToggleSwitch2.Checked == true) // если свич активирован, символы скрываются системным символом пароля 
+            {
+                guna2TextBox27.UseSystemPasswordChar = true;
+            }
+            else if (guna2ToggleSwitch2.Checked == false) // если не активирован, то всё по дефолту
+            {
+                guna2TextBox27.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void guna2TextBox19_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char l = e.KeyChar;
+            if ((l < 'А' || l > 'я') && l != '\b' && l != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox24_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox25_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox26_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox27_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'A' && e.KeyChar <= 'Z') || (e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '_' || e.KeyChar == '!' || e.KeyChar == '.' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == (char)Keys.Back)
+            {
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

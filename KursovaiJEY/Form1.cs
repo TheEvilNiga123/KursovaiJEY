@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace KursovaiJEY
 {
@@ -37,7 +38,7 @@ namespace KursovaiJEY
             connection.openConnection();
             MySqlCommand command = new MySqlCommand("SELECT * FROM `ALP` WHERE `login` = @Ul AND `pass` = @Up", connection.GetConnection()); //Создание команды на выборку
             command.Parameters.Add("@Ul", MySqlDbType.VarChar).Value = loginUser; //Заменяем шифр из команды на переменные
-            command.Parameters.Add("@Up", MySqlDbType.VarChar).Value = passUser; //зАМЕНЯЕМ ШИФР ИЗ КОМАНДЫ НА переменные
+            command.Parameters.Add("@Up", MySqlDbType.VarChar).Value = PassHide.Hash(passUser); //зАМЕНЯЕМ ШИФР ИЗ КОМАНДЫ НА переменные
             adapter.SelectCommand = command; // адаптер выберает команду "КОММАНД"
             adapter.Fill(table);
             if (table.Rows.Count > 0)
@@ -64,12 +65,14 @@ namespace KursovaiJEY
                     {
                         idAC = Convert.ToInt32(reader1[0]);
                         loginUser = reader1[1].ToString();
+                        passUser = reader1[2].ToString();
                         lvl = Convert.ToInt32(reader1[3]); //возможно ошибки
                     }
                     reader1.Close();
 
                     SaveData.IDC = idAC;
                     SaveData.LOGINC = loginUser;
+                    SaveData.PASSWORDC = passUser;
                     SaveData.LVLC = lvl;
                     MySqlDataReader reader2 = command1.ExecuteReader();
                     while (reader2.Read())

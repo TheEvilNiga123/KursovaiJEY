@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace KursovaiJEY
 {
@@ -95,7 +96,7 @@ namespace KursovaiJEY
             }
             else if (guna2TextBox2.Text == guna2TextBox3.Text)
             {
-                command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = guna2TextBox2.Text;
+                command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = PassHide.Hash(guna2TextBox2.Text);
             }
             else
             {
@@ -314,6 +315,20 @@ namespace KursovaiJEY
                 guna2ToggleSwitch1.Checked = true;
             }
         }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox3.Text != "")
+            {
+                guna2ToggleSwitch1.Visible = true;
+            }
+            else if (guna2TextBox3.Text == "")
+            {
+                guna2ToggleSwitch1.Visible = false;
+                guna2ToggleSwitch1.Checked = true;
+            }
+        }
+
 
     }
 }

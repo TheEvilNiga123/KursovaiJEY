@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace KursovaiJEY
 {
@@ -43,6 +45,15 @@ namespace KursovaiJEY
             return connection;
         }
     }
+    class PassHide //шифр
+    {
+        public static string Hash(string text)
+        {
+            byte[] data = Encoding.Default.GetBytes(text);
+            var result = new SHA256Managed().ComputeHash(data);
+            return BitConverter.ToString(result);
+        }
+    }
     static class SaveData
     {
         public static string ID_Employee;
@@ -53,6 +64,7 @@ namespace KursovaiJEY
         public static string ID_idAC;
         public static int IDC;
         public static string LOGINC;
+        public static string PASSWORDC;
         public static string FIOC;
         public static string TELEPHONEC;
         public static string ADDRESSC;
