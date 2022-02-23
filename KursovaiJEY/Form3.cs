@@ -618,6 +618,10 @@ namespace KursovaiJEY
         //////////////////////////////////////////////////// ДатаГрид отвечающий за список всех заявок
         public void guna2DataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (guna2DataGridView2.RowCount < 1)
+            {
+                return;
+            }
             if (e.RowIndex > 0)
             {
                 guna2DataGridView2.CurrentCell = guna2DataGridView2[e.ColumnIndex, e.RowIndex];
@@ -755,8 +759,8 @@ namespace KursovaiJEY
             connection.openConnection();
             MySqlCommand command88_1 = new MySqlCommand("DELETE FROM Client WHERE idAC = @uAD", connection.GetConnection());
             MySqlCommand command88_2 = new MySqlCommand("DELETE FROM ALP WHERE idAC = @uAD", connection.GetConnection());
-            int idc = Convert.ToInt32(SaveData.IDC);
-            if (SaveData.IDC != idc)
+            int idc = Convert.ToInt32(SaveData.ID_idAC);
+            if (SaveData.IDe != idc)
             {
                 if (SaveData.ID_idAC != null)
                 {
@@ -788,6 +792,10 @@ namespace KursovaiJEY
 
         private void guna2DataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (guna2DataGridView1.RowCount < 1)
+            {
+                return;
+            }
             if (e.RowIndex > 0)
             {
                 guna2DataGridView1.CurrentCell = guna2DataGridView1[e.ColumnIndex, e.RowIndex];
@@ -1065,10 +1073,22 @@ namespace KursovaiJEY
                 guna2TextBox9.PlaceholderForeColor = Color.Red;
                 return;
             }
+            if (guna2TextBox9.TextLength < 6)
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Длина пароля меньше 6 символов.");
+                return;
+            }
             else if (guna2TextBox8.Text == "")
             {
                 guna2TextBox8.PlaceholderText = "Введите повторный пароль";
                 guna2TextBox8.PlaceholderForeColor = Color.Red;
+                return;
+            }
+            if (guna2TextBox8.TextLength < 6)
+            {
+                listBox4.Items.Clear();
+                listBox4.Items.Add("Длина повторного пароля меньше 6 символов.");
                 return;
             }
 
@@ -1095,7 +1115,7 @@ namespace KursovaiJEY
             }
             else if (guna2TextBox9.Text == guna2TextBox8.Text)
             {
-                command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = guna2TextBox9.Text;
+                command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = PassHide.Hash(guna2TextBox9.Text);
             }
             else
             {
@@ -1363,6 +1383,10 @@ namespace KursovaiJEY
 
         private void guna2DataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (guna2DataGridView3.RowCount < 1)
+            {
+                return;
+            }
             if (e.RowIndex > 0)
             {
                 guna2DataGridView3.CurrentCell = guna2DataGridView3[e.ColumnIndex, e.RowIndex];
@@ -1464,6 +1488,10 @@ namespace KursovaiJEY
 
         private void guna2DataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (guna2DataGridView4.RowCount < 1)
+            {
+                return;
+            }
             if (e.RowIndex > 0)
             {
                 guna2DataGridView4.CurrentCell = guna2DataGridView4[e.ColumnIndex, e.RowIndex];
@@ -1560,8 +1588,22 @@ namespace KursovaiJEY
             index = toolStripLabel3.Text;
             command222.Parameters.Add("@1", MySqlDbType.VarChar).Value = index;
             command222.Parameters.Add("@2", MySqlDbType.VarChar).Value = SaveData.test;
-            command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.IDe;
-            command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = SaveData.FIOe;
+            if (SaveData.LVLe == 2)
+            {
+                command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.IDe;
+            }
+            if (SaveData.LVLe == 2)
+            {
+                command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = SaveData.FIOe;
+            }
+            if (SaveData.LVLe == 3)
+            {
+                command222.Parameters.Add("@3", MySqlDbType.VarChar).Value = SaveData.IDe;
+            }
+            if (SaveData.LVLe == 3)
+            {
+                command222.Parameters.Add("@4", MySqlDbType.VarChar).Value = SaveData.FIOe;
+            }
             command222.Parameters.Add("@5", MySqlDbType.VarChar).Value = DateTime.Now;
             command222.Parameters.Add("@6", MySqlDbType.VarChar).Value = guna2TextBox14.Text;
             command222.ExecuteNonQuery();
@@ -1571,6 +1613,11 @@ namespace KursovaiJEY
             MySqlCommand command333 = new MySqlCommand($"UPDATE Claim SET RS = 'Завершен' WHERE IDR = {index};", connection.GetConnection());
             command333.ExecuteNonQuery();
             connection.closeConnection();
+            guna2Panel6.Visible = false;
+            guna2DataGridView2.Visible = true;
+            toolStrip1.Visible = true;
+            guna2Button9.Visible = true;
+            guna2Button16.Visible = true;
         }
 
         private void guna2Button10_Click_1(object sender, EventArgs e)
@@ -1932,6 +1979,18 @@ namespace KursovaiJEY
             {
                 DBconnect connection = new DBconnect();
                 connection.openConnection();
+                if (guna2TextBox26.TextLength < 6)
+                {
+                        listBox4.Items.Clear();
+                        listBox4.Items.Add("Длина пароля меньше 6 символов.");
+                        return;
+                }
+                if (guna2TextBox27.TextLength < 6)
+                {
+                    listBox4.Items.Clear();
+                    listBox4.Items.Add("Длина повторного пароля меньше 6 символов.");
+                    return;
+                }
                 if (guna2TextBox26.Text == guna2TextBox25.Text)
                 {
                     listBox4.Items.Clear();
@@ -2082,5 +2141,13 @@ namespace KursovaiJEY
                 e.Handled = true;
             }
         }
+        private void guna2TextBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

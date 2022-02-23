@@ -59,18 +59,47 @@ namespace KursovaiJEY
                 guna2TextBox6.PlaceholderForeColor = Color.Red;
                 return;
             }
+            if (guna2TextBox6.TextLength < 3)
+            {
+                if (listBox1.Items.Contains("Длина логина меньше допустимой. Минимальная длина 3 символов.") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Длина логина меньше 3 символов.");
+                    return;
+                }
 
+            }
             if (guna2TextBox2.Text == "")
             {
                 guna2TextBox2.PlaceholderText = "Введите пароль";
                 guna2TextBox2.PlaceholderForeColor = Color.Red;
                 return;
             }
+            if (guna2TextBox2.TextLength < 6)
+            {
+                if (listBox1.Items.Contains("Длина пароля меньше допустимой. Минимальная длина 6 символов.") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Длина пароля меньше 6 символов.");
+                    return;
+                }
+
+            }
             else if (guna2TextBox3.Text == "")
             {
                 guna2TextBox3.PlaceholderText = "Введите повторный пароль";
                 guna2TextBox3.PlaceholderForeColor = Color.Red;
                 return;
+            }
+            if (guna2TextBox3.TextLength < 6)
+            {
+                if (listBox1.Items.Contains("Длина повторного пароля меньше допустимой. Минимальная длина 6 символов.") == false)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add("Длина повторного пароля меньше 6 символов.");
+                    return;
+                }
+
             }
 
             if (checkUser())

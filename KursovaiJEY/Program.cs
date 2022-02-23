@@ -74,6 +74,7 @@ namespace KursovaiJEY
 
         public static int IDe;
         public static string LOGINe;
+        public static string PASSWORDe;
         public static string FIOe;
         public static string TELEPHONEe;
         public static string ADDRESSe;
